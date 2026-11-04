@@ -1,0 +1,59 @@
+= Noms et adresses
+include::_fpsot-terms.adoc[]
+
+Ces règles portent sur la façon de demander, de conserver et de montrer les noms et les adresses postales.
+
+== Noms de personnes
+
+[[LOC-050]]
+*LOC-050.* Un produit NE DOIT PAS supposer qu’un nom compte un prénom et un nom de famille.
+Il DEVRAIT demander le nom complet dans un seul champ.
+Il PEUT demander des parties distinctes seulement quand un processus en a besoin, comme un rapprochement avec un registre.
+Ces parties NE DOIVENT PAS être obligatoires, et leurs libellés DEVRAIENT être « Prénoms » et « Nom de famille ».
+Bien des personnes n’ont qu’un nom, ont plusieurs noms de famille ou placent le nom de famille en premier.
+Un formulaire conçu pour un seul modèle rejette les autres.
+
+[[LOC-051]]
+*LOC-051.* Un champ de nom DOIT accepter toute lettre et tout signe diacritique Unicode.
+Il DOIT aussi accepter les espaces, les traits d’union et les apostrophes.
+Il DOIT accepter un nom d’un seul caractère et DEVRAIT permettre au moins 100 caractères.
+Un produit DOIT conserver et montrer le nom tel que la personne l’a écrit, sans changer la casse.
+Des noms comme « D’Amours », « Lévesque-Côté » ou « McNeil » perdent leur sens quand un système les réécrit.
+
+[[LOC-052]]
+*LOC-052.* Un produit NE DOIT PAS exiger un titre de civilité, comme « M. » ou « Mme ».
+Il DEVRAIT demander à part le nom que la personne veut qu’on emploie.
+Un titre révèle un genre dont le service n’a peut-être pas besoin.
+Le nom de tous les jours peut différer du nom légal.
+
+== Adresses postales
+
+[[LOC-053]]
+*LOC-053.* Un produit DOIT conserver une adresse en champs distincts, avec le code de pays {abbr-iso-first} 3166-1 à deux lettres.
+Il DOIT montrer et imprimer l’adresse selon le format de son pays.
+Les champs DOIVENT convenir au pays.
+Un produit NE DOIT PAS exiger un code postal ou une région là où le pays n’en a pas.
+Chaque pays ordonne et nomme à sa façon les parties d’une adresse.
+Des champs distincts permettent d’imprimer une même adresse pour bien des systèmes postaux.
+
+[[LOC-054]]
+*LOC-054.* Un produit DOIT mettre en forme une adresse canadienne comme le décrivent les lignes directrices d’adressage de Postes Canada.
+La municipalité, le code de la province ou du territoire et le code postal vont sur la même ligne.
+Le code postal DOIT être en majuscules, sous la forme `A1A 1A1`, avec une espace.
+Une étiquette d’adresse PEUT employer les majuscules et aucune ponctuation, comme le recommande Postes Canada.
+Les machines de tri du courrier lisent les adresses dans ce format.
+
+[[LOC-055]]
+*LOC-055.* Un produit NE DOIT PAS traduire les noms de rues ou de municipalités.
+Il DOIT garder une adresse dans sa langue d’origine, et DEVRAIT indiquer cette langue.
+`Trois-Rivières` reste `Trois-Rivières` sur un écran en anglais.
+Une rue comme `rue Principale` garde son ordre et son générique français.
+Les noms de lieux officiels n’ont qu’une forme, et un nom traduit peut envoyer le courrier au mauvais endroit.
+
+== Historique du document
+
+[cols="1,1,4",options="header"]
+|===
+|Version |Date |Changement
+|0.1.0 |2026-11-04 |Première version.
+|===

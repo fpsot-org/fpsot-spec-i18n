@@ -1,0 +1,71 @@
+= Text, markup and direction
+include::_fpsot-terms.adoc[]
+
+These rules cover how a product marks the language of text, sets its direction and keeps characters intact.
+
+== Language of the content
+
+[[LOC-040]]
+*LOC-040.* A product MUST declare the language of each page or document.
+In {abbr-html-first}, the `lang` attribute of the `html` element does this.
+It MUST also mark each passage in another language with its own language tag.
+The declared language MUST be the language actually shown, including after a fallback.
+Screen readers, search engines and translation tools all rely on this declaration.
+
+An {abbr-api-first} response MUST state in the `Content-Language` header the language of the text that the product chose.
+Such text includes messages, pages and error texts.
+Data with its own language tags needs no single `Content-Language`.
+An example is a field that holds every language.
+Each value already names its language, and one header cannot name several.
+
+[[LOC-041]]
+*LOC-041.* Every page MUST offer a link to the same content in each other language that the product supports.
+The link MUST name each language in that language, such as "Français" and "English", with a matching language tag.
+A product MUST NOT use flags to stand for languages.
+A person who cannot read the current page can still find their own language.
+A flag stands for a country, and one country can have several languages.
+
+== Characters
+
+[[LOC-042]]
+*LOC-042.* A product MUST store, send and show text as Unicode, in {abbr-utf-8-first}.
+It MUST keep accents and other diacritics intact from input to output, including in emails, files and exports.
+A product MUST NOT remove accents to fit an old system.
+A name without its accents is a different word, and sometimes a different person.
+
+[[LOC-043]]
+*LOC-043.* A product SHOULD compare and search text in Unicode normalization form C.
+A search SHOULD match a word with or without its accents.
+The same letter `é` can arrive as one character or as two.
+Many people type French without accents on a phone or on an English keyboard.
+
+== Direction
+
+[[LOC-044]]
+*LOC-044.* A product SHOULD be ready for right-to-left languages, even when it ships only English and French.
+It SHOULD set the base direction in the markup, from the locale, and not in the style sheets.
+Style sheets SHOULD use the logical sides `start` and `end` rather than `left` and `right`.
+Icons that show a direction, such as arrows, SHOULD mirror in a right-to-left locale.
+A contributor can then add Arabic or Hebrew with translations alone.
+A layout fixed to the left would need a redesign first.
+
+[[LOC-045]]
+*LOC-045.* A product MUST isolate text whose direction it does not know, such as names and other entries from people.
+In {abbr-html}, the `bdi` element or the attribute `dir="auto"` does this.
+A name in Arabic inside a French sentence would otherwise reorder the words around it.
+
+== Layout
+
+[[LOC-046]]
+*LOC-046.* A product MUST NOT put text that people read inside images.
+Its layouts MUST leave room for text to grow, with no fixed width that fits only the English text.
+Text in an image escapes translation, and people cannot resize or copy it.
+French text often runs longer than the same text in English.
+
+== Document history
+
+[cols="1,1,4",options="header"]
+|===
+|Version |Date |Change
+|0.1.0 |2026-11-04 |First version.
+|===

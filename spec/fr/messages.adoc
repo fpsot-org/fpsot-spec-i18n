@@ -1,0 +1,60 @@
+= Messages
+include::_fpsot-terms.adoc[]
+
+Ces règles portent sur le texte d’un produit que lisent les personnes : libellés, aide, messages d’erreur, courriels et documents produits.
+La spécification de rédaction de la {abbr-fpsot-first} fixe la façon d’écrire ce texte.
+Cette page fixe la façon de le conserver et de le construire, pour qu’on puisse le traduire.
+
+== Chaînes hors du code
+
+[[LOC-020]]
+*LOC-020.* Un produit DOIT garder chaque texte visible dans des catalogues de messages, hors du code du programme.
+Cela comprend les libellés, les messages d’erreur, les courriels et les documents produits.
+Cela comprend aussi les équivalents textuels des images et les noms d’unités.
+Chaque message DOIT avoir un identifiant stable.
+Les personnes qui traduisent travaillent alors sans modifier le code.
+Un texte placé dans le code échappe à toute vérification de traduction.
+
+[[LOC-021]]
+*LOC-021.* Un produit NE DOIT PAS construire une phrase en joignant des fragments de messages.
+Chaque phrase DOIT former un seul message, avec des variables nommées pour les valeurs.
+L’ordre des mots change d’une langue à l’autre.
+Une phrase faite de fragments anglais ne peut pas devenir du français correct.
+
+== Syntaxe des messages
+
+[[LOC-022]]
+*LOC-022.* Les messages DOIVENT employer la syntaxe MessageFormat que définit {abbr-icu-first}.
+Ils passent par {abbr-icu} ou par une autre bibliothèque qui lit la même syntaxe.
+Un produit PEUT plutôt employer Unicode MessageFormat 2 là où sa bibliothèque offre cette syntaxe dans une {abbr-api-first} stable.
+MessageFormat est la syntaxe commune des variables, des pluriels et des choix.
+La syntaxe MessageFormat 2 est stable dans la spécification du {abbr-cldr-first} 49.
+Une partie de son {abbr-api} dans {abbr-icu} 79 reste en préversion technologique.
+
+[[LOC-023]]
+*LOC-023.* Un message qui contient un nombre DOIT choisir ses mots selon des catégories de pluriel, comme `one` et `other`.
+Les catégories DOIVENT venir des règles de pluriel du {abbr-cldr}.
+Le code du programme NE DOIT PAS tester la valeur 1 pour choisir un pluriel.
+Le français place 0 et 1 dans la même catégorie, ce que l’anglais ne fait pas.
+D’autres langues ont jusqu’à six catégories.
+
+[[LOC-024]]
+*LOC-024.* Un message DEVRAIT employer une formulation qui convient à une personne de tout genre.
+Un message PEUT choisir une forme genrée seulement à partir d’une valeur que la personne a donnée à cette fin.
+Un produit NE DOIT PAS déduire un genre d’un nom, d’un titre ou d’une photo.
+Une formulation neutre convient à toute personne sans aucune donnée.
+Une erreur blesse la personne et nuit à la confiance envers un service public.
+
+[[LOC-025]]
+*LOC-025.* Chaque message DOIT porter une note de traduction qui donne son contexte et le sens de chaque variable.
+Deux messages au même texte anglais, mais au sens différent, DOIVENT avoir deux identifiants.
+En anglais, « Open » peut être un verbe sur un bouton ou un état dans une liste.
+Le français a besoin de deux mots différents pour ces deux usages.
+
+== Historique du document
+
+[cols="1,1,4",options="header"]
+|===
+|Version |Date |Changement
+|0.1.0 |2026-11-04 |Première version.
+|===

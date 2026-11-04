@@ -1,0 +1,77 @@
+= Étiquettes de langue et paramètres régionaux
+include::_fpsot-terms.adoc[]
+
+Ces règles nomment les langues et choisissent la langue que voit une personne.
+Un {term-locale} associe une langue aux conventions d’une région, par exemple `fr-CA` pour le français du Canada.
+
+== Étiquettes de langue
+
+[[LOC-001]]
+*LOC-001.* Un produit DOIT désigner chaque langue et chaque paramètre régional par une étiquette de langue conforme au {abbr-bcp-first} 47.
+Chaque étiquette DOIT être valide selon le registre des sous-étiquettes de langue de l’{abbr-iana-first}.
+Un produit DOIT écrire les étiquettes dans la casse habituelle, par exemple `fr-CA` ou `zh-Hant-TW`.
+La langue est en minuscules, l’écriture a une majuscule initiale et la région est en majuscules.
+Une seule syntaxe fonctionne alors dans les pages, les appels d’{abbr-api-first}, les fichiers de traduction et les bibliothèques.
+Une casse commune évite les surprises lors des comparaisons.
+
+[[LOC-002]]
+*LOC-002.* Une étiquette DEVRAIT être la plus courte qui fait la distinction voulue.
+Écrivez `fr` ou `fr-CA`, et non `fr-Latn-CA`.
+Un produit NE DOIT PAS envoyer de formes de plateforme, comme `fr_CA`, dans des données qui sortent du programme.
+Il les convertit à la frontière de la bibliothèque qui en a besoin.
+Les sous-étiquettes en trop n’apportent rien et font échouer la correspondance.
+La forme avec un trait de soulignement appartient à certaines plateformes, pas au {abbr-bcp} 47.
+
+== Paramètres régionaux pris en charge
+
+[[LOC-003]]
+*LOC-003.* Chaque produit de la {abbr-fpsot-first} DOIT prendre en charge les paramètres régionaux `en-CA` et `fr-CA`.
+Il PEUT prendre en charge tout autre paramètre régional qui a des données dans le {abbr-cldr-first}.
+Les personnes qui contribuent ajoutent les autres variantes, comme `en-GB` ou `en-US`, avec leurs traductions.
+La {abbr-fpsot} sert d’abord les organismes publics canadiens.
+Le {abbr-cldr} contient les formats de centaines de paramètres régionaux, donc un nouveau paramètre ne demande aucun nouveau code.
+
+[[LOC-004]]
+*LOC-004.* Un déploiement DOIT fixer un seul paramètre régional par défaut, `en-CA` ou `fr-CA`.
+Un déploiement qui sert le public au Québec DEVRAIT choisir `fr-CA`.
+Le paramètre par défaut ne s’applique que si aucune autre étape de la négociation ne trouve de correspondance.
+Le français est la langue officielle du Québec, et les organismes publics québécois emploient le français par défaut.
+
+== Négociation et repli
+
+[[LOC-005]]
+*LOC-005.* Un produit DOIT choisir le paramètre régional d’une réponse dans cet ordre, et s’arrêter à la première correspondance.
+
+. Le choix que la personne fait dans la page, par exemple un lien de langue.
+
+. La préférence enregistrée dans le profil de la personne.
+
+. L’en-tête `Accept-Language` de la requête, comparé aux paramètres régionaux pris en charge.
+
+. Le paramètre régional par défaut du déploiement.
+
+Un produit NE DOIT PAS deviner une langue à partir du lieu ou de l’adresse réseau de la personne.
+Un réglage du navigateur est souvent une valeur par défaut que la personne n’a jamais choisie.
+Un lieu ne dit rien de la langue que lit une personne.
+
+[[LOC-006]]
+*LOC-006.* Un produit DOIT chercher chaque message dans une chaîne de repli selon la méthode de recherche du {abbr-rfc-first} 4647.
+La chaîne retire les sous-étiquettes en partant de la fin, puis se termine par le paramètre régional par défaut.
+Par exemple, `fr-CA` se replie sur `fr`, puis sur le paramètre par défaut.
+Les bibliothèques qui suivent les paramètres parents du {abbr-cldr}, comme `en-CA` vers `en-001` puis `en`, respectent cette règle.
+Un produit NE DOIT PAS montrer une clé de message ou une chaîne vide à une personne.
+Un message dans une langue proche aide plus qu’une clé technique.
+
+[[LOC-007]]
+*LOC-007.* Quand un écran ou un document montre l’anglais et le français, le déploiement DOIT fixer leur ordre.
+Par défaut, le français DOIT venir en premier au Québec, et l’anglais ailleurs au Canada.
+La règle fédérale sur l’ordre des langues officielles fonctionne de la même façon.
+Un ordre fixe par déploiement garde tous les écrans cohérents.
+
+== Historique du document
+
+[cols="1,1,4",options="header"]
+|===
+|Version |Date |Changement
+|0.1.0 |2026-11-04 |Première version.
+|===

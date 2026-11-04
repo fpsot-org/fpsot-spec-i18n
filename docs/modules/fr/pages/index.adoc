@@ -1,16 +1,68 @@
-= Guide
-:translation-status: pending
-:page-type: explanation
+= Préparer un produit en anglais et en français
+:page-type: how-to
 include::_fpsot-terms.adoc[]
 
-Cette page explique la spécification aux personnes qui l’adoptent.
-Chaque page de guide a un seul type.
-C’est un tutoriel, un guide pratique, une référence ou une explication.
+Ce guide montre comment respecter les principales règles d’internationalisation dans un produit Web.
+Les exemples emploient un paquet de messages Java, mais les étapes conviennent à toute plateforme.
+
+== Sortir le texte du code
+
+Placez chaque libellé et chaque message dans un catalogue par langue, comme le demande la règle LOC-020.
+Donnez à chaque message une clé stable et une note pour les personnes qui traduisent, comme le demande LOC-025.
+
+[source,properties]
+----
+# messages.properties, la source anglaise
+# Shown above the list of files. {count} is the number of files.
+files.count={count, plural, one {# file} other {# files}}
+
+# messages_fr_CA.properties
+files.count={count, plural, one {# fichier} other {# fichiers}}
+----
+
+La forme plurielle vient des règles de pluriel, jamais d’un test de la valeur 1 dans le code.
+En français, 0 et 1 prennent tous deux le singulier, donc « 0 fichier » est correct.
+
+== Mettre en forme avec les données régionales
+
+Mettez en forme chaque date, nombre et montant avec une bibliothèque qui lit le {abbr-cldr-first}, comme le demande LOC-010.
+N’écrivez jamais à la main un modèle comme `yyyy/MM/dd`.
+Montrez le fuseau horaire à côté d’une échéance quand les personnes peuvent vivre dans d’autres provinces.
+
+== Choisir la langue
+
+Lisez d’abord le choix de la personne, puis la préférence enregistrée, puis l’en-tête `Accept-Language`, comme le prévoit LOC-005.
+Repliez-vous de `fr-CA` vers `fr`, puis vers la valeur par défaut du déploiement.
+Placez sur chaque page un lien vers l’autre langue, nommé « Français » ou « English », sans drapeau.
+Déclarez la langue sur l’élément `html`, comme le demande LOC-040.
+
+== Envoyer le texte à traduire
+
+Exportez le catalogue en fichier {abbr-xliff-first} 2.1 pour l’équipe de traduction, comme le demande LOC-032.
+La traduction automatique peut fournir une première ébauche, mais chaque ébauche garde l’état `initial` jusqu’à sa révision par une personne.
+Importez le fichier révisé, et laissez les vérifications de version confirmer qu’aucune entrée n’attend encore.
+
+[source,xml]
+----
+<unit id="files.count">
+  <segment state="reviewed">
+    <source>{count, plural, one {# file} other {# files}}</source>
+    <target>{count, plural, one {# fichier} other {# fichiers}}</target>
+  </segment>
+</unit>
+----
+
+== Vérifier les noms et les adresses
+
+Demandez le nom complet dans un seul champ, comme le demande LOC-050.
+Conservez chaque adresse en champs distincts, avec son code de pays.
+Imprimez un code postal canadien sous la forme `A1A 1A1`.
+Gardez les noms de rues et de municipalités tels qu’ils sont écrits.
 
 == Historique du document
 
 [cols="1,1,4",options="header"]
 |===
 |Version |Date |Changement
-|0.1.0 |2026-11-03 |Première version.
+|0.1.0 |2026-11-04 |Première version.
 |===

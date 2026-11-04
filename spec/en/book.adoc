@@ -1,7 +1,19 @@
-= Specification title
+= FPSOT internationalization specification
 :doctype: book
 :toc:
 
 include::index.adoc[leveloffset=+1]
+
+include::language-tags.adoc[leveloffset=+1]
+
+include::formatting.adoc[leveloffset=+1]
+
+include::messages.adoc[leveloffset=+1]
+
+include::translation.adoc[leveloffset=+1]
+
+include::markup.adoc[leveloffset=+1]
+
+include::names-addresses.adoc[leveloffset=+1]
 
 include::glossary.adoc[leveloffset=+1]

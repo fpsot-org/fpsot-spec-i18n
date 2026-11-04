@@ -1,10 +1,10 @@
 # Instructions for agents
 
-This repository holds an FPSOT specification.
-Replace this line with what the specification covers.
+This repository holds the FPSOT internationalization specification.
+It covers language tags, locale negotiation and fallback, CLDR formatting, MessageFormat messages, translation files, text direction, and personal names and postal addresses.
 
-- The normative text is in `spec/en/` and `spec/fr/`. Every rule has an ID such as `XYZ-001`.
-- Follow `skill/SKILL.md` when you work on this specification. The spec text wins on any difference.
+- The normative text is in `spec/en/` and `spec/fr/`. Every rule has an ID such as `LOC-001`.
+- Follow `skill/SKILL.md` when you work on a product that shows text to people. The spec text wins on any difference.
 - Every page exists in English and in French, with the same file name and the same IDs.
 - Terms and abbreviations come from the term base of `fpsot-spec-writing`. Add a missing term there first.
 - Do not copy text from outside standards. Summarise them in your own words and cite the exact version.

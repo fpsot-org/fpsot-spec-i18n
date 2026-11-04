@@ -1,0 +1,77 @@
+= Language tags and locales
+include::_fpsot-terms.adoc[]
+
+These rules name languages and choose the language that a person sees.
+A {term-locale} is a language together with the conventions of a region, such as `fr-CA` for French in Canada.
+
+== Language tags
+
+[[LOC-001]]
+*LOC-001.* A product MUST identify every language and locale with a language tag that follows {abbr-bcp-first} 47.
+Each tag MUST be valid against the language subtag registry of the {abbr-iana-first}.
+A product MUST write tags in the usual case, such as `fr-CA` or `zh-Hant-TW`.
+The language is in lower case, the script in title case and the region in upper case.
+One tag syntax then works in pages, in {abbr-api-first} calls, in translation files and in libraries.
+Tags compare without surprises when they share one case form.
+
+[[LOC-002]]
+*LOC-002.* A tag SHOULD be the shortest tag that makes the needed distinction.
+Write `fr` or `fr-CA`, not `fr-Latn-CA`.
+A product MUST NOT send platform forms such as `fr_CA` in data that leaves the program.
+It converts them at the edge of the library that needs them.
+Extra subtags add nothing and make matching fail.
+The underscore form belongs to some platforms, not to {abbr-bcp} 47.
+
+== Supported locales
+
+[[LOC-003]]
+*LOC-003.* Every {abbr-fpsot-first} product MUST support the `en-CA` and `fr-CA` locales.
+It MAY support any other locale that has data in the {abbr-cldr-first}.
+Contributors add other variants, such as `en-GB` or `en-US`, with their translations.
+{abbr-fpsot} serves Canadian public bodies first.
+The {abbr-cldr} holds the formats of hundreds of locales, so no new locale needs new code.
+
+[[LOC-004]]
+*LOC-004.* A deployment MUST set one default locale, `en-CA` or `fr-CA`.
+A deployment that serves the public in Québec SHOULD set `fr-CA`.
+The default applies only when no other step of the negotiation finds a match.
+French is the official language of Québec, and Québec public bodies use French by default.
+
+== Negotiation and fallback
+
+[[LOC-005]]
+*LOC-005.* A product MUST choose the locale of a response in this order, and stop at the first match.
+
+. The choice that the person makes on the page, such as a language link.
+
+. The preference saved in the profile of the person.
+
+. The `Accept-Language` header of the request, matched against the supported locales.
+
+. The default locale of the deployment.
+
+A product MUST NOT guess a language from the location or the network address of the person.
+A browser setting is often a default that the person never chose.
+A location says nothing about the language that a person reads.
+
+[[LOC-006]]
+*LOC-006.* A product MUST look up each message through a fallback chain built with the lookup scheme of {abbr-rfc-first} 4647.
+The chain removes subtags from the end, then ends with the default locale.
+For example, `fr-CA` falls back to `fr`, then to the default locale.
+Libraries that follow the parent locales of the {abbr-cldr}, such as `en-CA` to `en-001` to `en`, meet this rule.
+A product MUST NOT show a message key or an empty string to a person.
+A message in a near language helps the reader more than a technical key.
+
+[[LOC-007]]
+*LOC-007.* When a screen or a document shows both English and French, the deployment MUST set which comes first.
+The default order MUST put French first for a deployment in Québec, and English first elsewhere in Canada.
+The federal rule on the order of official languages works the same way.
+A fixed order per deployment keeps every screen consistent.
+
+== Document history
+
+[cols="1,1,4",options="header"]
+|===
+|Version |Date |Change
+|0.1.0 |2026-11-04 |First version.
+|===

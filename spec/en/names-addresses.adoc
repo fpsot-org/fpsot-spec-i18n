@@ -1,0 +1,59 @@
+= Names and addresses
+include::_fpsot-terms.adoc[]
+
+These rules cover how a product asks for, stores and shows the names of people and their postal addresses.
+
+== Personal names
+
+[[LOC-050]]
+*LOC-050.* A product MUST NOT assume that a name has a first name and a last name.
+It SHOULD ask for the full name in one field.
+It MAY ask for separate parts only when a process needs them, such as a match with another register.
+Those parts MUST NOT be mandatory, and their labels SHOULD read "Given names" and "Family name".
+Many people have one name only, several family names, or the family name first.
+A form built for one pattern rejects the others.
+
+[[LOC-051]]
+*LOC-051.* A name field MUST accept any Unicode letter and diacritical mark.
+It MUST also accept spaces, hyphens and apostrophes.
+It MUST accept a name of one character and SHOULD allow at least 100 characters.
+A product MUST store and show the name as the person wrote it, with no change of case.
+Names such as "D'Amours", "Lévesque-Côté" or "McNeil" lose their meaning when a system rewrites them.
+
+[[LOC-052]]
+*LOC-052.* A product MUST NOT require a title, such as "Mr." or "Ms.".
+It SHOULD ask separately for the name that the person wants people to use.
+A title reveals a gender that the service may not need.
+The name used every day can differ from the legal name.
+
+== Postal addresses
+
+[[LOC-053]]
+*LOC-053.* A product MUST store a postal address as separate fields, with the country as an {abbr-iso-first} 3166-1 two-letter code.
+It MUST show and print the address in the format of its country.
+The fields MUST fit the country.
+A product MUST NOT require a postal code or a region where the country has none.
+Each country orders and names the parts of an address in its own way.
+Separate fields let a product print one address for many postal systems.
+
+[[LOC-054]]
+*LOC-054.* A product MUST format a Canadian address as the addressing guidelines of Canada Post describe.
+The municipality, the two-letter code of the province or territory and the postal code go on the same line.
+The postal code MUST be in capital letters, in the form `A1A 1A1`, with one space.
+A mailing label MAY use capital letters and no punctuation, as Canada Post recommends.
+Mail sorting machines read addresses in this format.
+
+[[LOC-055]]
+*LOC-055.* A product MUST NOT translate the names of streets or municipalities.
+It MUST keep an address in its original language, and SHOULD mark that language.
+`Trois-Rivières` stays `Trois-Rivières` on an English screen.
+A street such as `rue Principale` keeps its French order and type.
+Official place names have one form, and a translated name can send mail to the wrong place.
+
+== Document history
+
+[cols="1,1,4",options="header"]
+|===
+|Version |Date |Change
+|0.1.0 |2026-11-04 |First version.
+|===

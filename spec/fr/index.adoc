@@ -1,9 +1,23 @@
-= Titre de la spécification
-:translation-status: pending
+= Spécification FPSOT sur l’internationalisation
 include::_fpsot-terms.adoc[]
 
-Remplacez cette page par le texte normatif de la spécification.
-Commencez par la portée, puis les classes de conformité, puis les exigences.
+Cette spécification règle l’affichage du texte et des nombres des produits de la {abbr-fpsot-first}, dans la langue de chaque personne.
+Elle fixe aussi la façon de conserver les messages et d’échanger les traductions.
+Chaque produit de la {abbr-fpsot} existe en anglais et en français du Canada.
+Les règles permettent d’ajouter tout autre {term-locale}.
+
+Les règles forment six parties.
+
+* Les xref:language-tags.adoc[étiquettes de langue et paramètres régionaux] nomment les langues et choisissent celle que voit une personne.
+* La xref:formatting.adoc[mise en forme] porte sur l’aspect des dates, des nombres et des montants.
+* Les xref:messages.adoc[messages] gardent le texte hors du code et traitent les pluriels et le genre.
+* La xref:translation.adoc[traduction] porte sur les deux langues et les fichiers de traduction.
+* La partie xref:markup.adoc[texte, balisage et sens d’écriture] déclare les langues et garde les caractères intacts.
+* Les xref:names-addresses.adoc[noms et adresses] portent sur les noms de personnes et les adresses postales.
+
+La spécification de rédaction de la {abbr-fpsot} fixe la façon d’écrire le texte lui-même.
+Cette spécification porte sur l’affichage seulement.
+Elle ne fixe pas la façon dont les programmes conservent les dates, les montants ou le texte en deux langues.
 
 == Conformité
 
@@ -12,24 +26,46 @@ ____
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 (RFC 2119, RFC 8174) when, and only when, they appear in all capitals, as shown here.
 ____
 
-La version française emploie les mots clés français de la spécification de rédaction de la {abbr-fpsot-first}, à l'exigence WRT-011.
+Les mots clés suivent l’exigence WRT-010 de la spécification de rédaction de la {abbr-fpsot}.
+La version française emploie les mots clés français de l’exigence WRT-011.
 
-== Exigences
+Un produit est conforme à cette spécification s’il respecte toutes les règles DOIT.
+Les règles qui nomment un produit de la {abbr-fpsot}, comme LOC-003 et LOC-030, visent les produits que publie la {abbr-fpsot}.
+Les autres produits les respectent quand ils annoncent les mêmes deux langues.
 
-Donnez à chaque exigence une ancre avec son identifiant, juste au-dessus de son paragraphe.
-L'ancre ressemble à `+[[XYZ-001]]+`.
-L'exemple ci-dessous montre la forme. Remplacez-le par la première exigence.
+== Sources
 
-[[TPL-001]]
-*TPL-001.* Un énoncé normatif DOIT employer un des mots clés du {abbr-bcp-first} 14, en majuscules.
-Le mot clé donne sa force à la règle.
+Cette spécification résume ces sources externes dans ses propres mots.
+Chaque ligne donne la version et la date qu’indique l’éditeur, un lien et une copie archivée.
+
+[cols="3,2,2,1",options="header"]
+|===
+|Source |Version |Date |Archive
+|link:https://www.rfc-editor.org/info/rfc5646[RFC 5646, Tags for Identifying Languages] |BCP 47 |2009-09 |link:https://web.archive.org/web/20261027004131/https://www.rfc-editor.org/info/rfc5646/[copie]
+|link:https://www.rfc-editor.org/info/rfc4647[RFC 4647, Matching of Language Tags] |BCP 47 |2006-09 |link:https://web.archive.org/web/20261027030853/https://www.rfc-editor.org/info/rfc4647/[copie]
+|link:https://cldr.unicode.org/downloads/cldr-49[Unicode CLDR 49, notes de version] |49 |2026-10-22 |link:https://web.archive.org/web/20261027022544/https://cldr.unicode.org/downloads/cldr-49[copie]
+|link:https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html[UTS #35, Part 9: MessageFormat] |CLDR 49, revision 79 |2026-10-21 |link:https://web.archive.org/web/20261027022518/https://www.unicode.org/reports/tr35/tr35-messageFormat.html[copie]
+|link:https://unicode-org.github.io/icu/download/79.html[ICU 79, notes de version] |79 |2026-10-22 |link:https://web.archive.org/web/20261027030033/https://unicode-org.github.io/icu/download/79.html[copie]
+|link:https://unicode-org.github.io/icu/userguide/format_parse/messages/[ICU User Guide, Formatting Messages] |Non précisée |Non précisée |link:https://web.archive.org/web/20261022130913/https://unicode-org.github.io/icu/userguide/format_parse/messages/[copie]
+|link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[XLIFF Version 2.1, OASIS Standard] |2.1 |2018-02-13 |link:https://web.archive.org/web/20260702061048/https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[copie]
+|link:https://docs.oasis-open.org/xliff/xliff-core/v2.2/xliff-core-v2.2-part1.html[XLIFF Version 2.2, Part 1: Core, Committee Specification 01] |2.2 |2025-03-13 |link:https://web.archive.org/web/20260902173033/https://docs.oasis-open.org/xliff/xliff-core/v2.2/xliff-core-v2.2-part1.html[copie]
+|link:https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html[GNU gettext manual, The Format of PO Files] |1.0 |Non précisée |link:https://web.archive.org/web/20261018135650/https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html[copie]
+|link:https://www.w3.org/International/questions/qa-personal-names[W3C, Personal names around the world] |Non précisée |2016-01-24 |link:https://web.archive.org/web/20261005230211/https://www.w3.org/International/questions/qa-personal-names[copie]
+|link:https://www.w3.org/International/questions/qa-html-language-declarations[W3C, Declaring language in HTML] |Non précisée |2021-06-23 |link:https://web.archive.org/web/20260918002647/https://www.w3.org/International/questions/qa-html-language-declarations[copie]
+|link:https://www.w3.org/International/questions/qa-html-dir[W3C, Structural markup and right-to-left text in HTML] |Non précisée |2026-05-10 |link:https://web.archive.org/web/20260905105242/https://www.w3.org/International/questions/qa-html-dir[copie]
+|link:https://www.w3.org/International/questions/qa-accept-lang-locales[W3C, Accept-Language used for locale setting] |Non précisée |2016-02-26 |link:https://web.archive.org/web/20260221230337/https://www.w3.org/International/questions/qa-accept-lang-locales[copie]
+|link:https://www.w3.org/International/questions/qa-choosing-encodings[W3C, Choosing and applying a character encoding] |Non précisée |2016-01-26 |link:https://web.archive.org/web/20261025041230/https://www.w3.org/International/questions/qa-choosing-encodings[copie]
+|link:https://www.tbs-sct.canada.ca/pol/doc-fra.aspx?id=26164[Secrétariat du Conseil du Trésor du Canada, Directive sur les langues officielles pour les communications et services] |En vigueur depuis le 2012-11-19 |2012-10-15 |link:https://web.archive.org/web/20250826204952/https://www.tbs-sct.canada.ca/pol/doc-fra.aspx?id=26164[copie]
+|link:https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Postes Canada, Addressing guidelines: Civic address] |Non précisée |Non précisée |link:https://web.archive.org/web/20260709050719/https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[copie]
+|link:https://www.upu.int/UPU/media/upu/PostalEntitiesFiles/addressingUnit/canEn.pdf[Union postale universelle, Postal addressing systems: Canada] |Non précisée |2014-09 |link:https://web.archive.org/web/20260606074343/https://www.upu.int/UPU/media/upu/PostalEntitiesFiles/addressingUnit/CANEn.pdf[copie]
+|link:https://design.quebec.ca/contenu/orientations-generales/langue-traduction[Système de design gouvernemental, Langue et traduction] |Non précisée |2026-10-13 |link:https://web.archive.org/web/20250804161651/https://design.quebec.ca/contenu/orientations-generales/langue-traduction[copie]
+|link:https://www.quebec.ca/gouvernement/ministeres-organismes/langue-francaise/publications/politique-utilisation-francais-tic[Politique d'utilisation du français dans les technologies de l'information et des communications] |Adoptée en 2006-12 |2026-07-16 |link:https://web.archive.org/web/20110520130456/http://www.spl.gouv.qc.ca/documentation/loisreglementspolitiques/puftic/[copie]
+|===
 
 == Historique du document
-
-Ajoutez une ligne pour chaque version qui modifie cette page.
 
 [cols="1,1,4",options="header"]
 |===
 |Version |Date |Changement
-|0.1.0 |2026-11-03 |Première version.
+|0.1.0 |2026-11-04 |Première version.
 |===

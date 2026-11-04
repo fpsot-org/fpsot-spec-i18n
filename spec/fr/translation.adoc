@@ -1,0 +1,66 @@
+= Traduction
+include::_fpsot-terms.adoc[]
+
+Ces règles portent sur les deux langues des produits de la {abbr-fpsot-first} et sur les fichiers qui transportent les traductions.
+
+== Anglais et français
+
+[[LOC-030]]
+*LOC-030.* Dans un produit de la {abbr-fpsot}, chaque texte visible DOIT exister en anglais et en français avant une version.
+Les vérifications de version DOIVENT échouer quand un message n’a pas l’une des deux langues.
+Les deux versions DOIVENT avoir la même qualité.
+Les institutions fédérales publient leur contenu Web dans les deux langues officielles, en même temps et à qualité égale.
+Cette vérification empêche une langue de prendre du retard sur l’autre.
+
+[[LOC-031]]
+*LOC-031.* La traduction automatique PEUT produire une première ébauche d’un message, comme le permet la règle de rédaction WRT-033.
+Un produit DOIT marquer chaque ébauche automatique comme non révisée dans son fichier de traduction.
+Une personne DOIT réviser l’ébauche et retirer cette marque avant la version.
+Les vérifications de version DOIVENT échouer tant qu’une entrée marquée reste en anglais ou en français.
+La traduction automatique rate des termes, le registre et le contexte.
+La marque montre à la personne qui révise les entrées qui attendent encore une révision.
+
+== Fichiers de traduction
+
+[[LOC-032]]
+*LOC-032.* Un produit DOIT garder ses messages d’interface dans un catalogue source par langue, au format de sa plateforme.
+Il DOIT échanger ces messages avec les services et les outils de traduction sous forme de fichiers {abbr-xliff-first} 2.1.
+Le programme lit un format de plateforme, comme les paquets de messages d’un cadriciel Java.
+Les outils professionnels de traduction lisent {abbr-xliff} 2.1, la norme approuvée.
+Ce format garde ensemble la source, la traduction et l’état de chaque segment.
+
+[[LOC-033]]
+*LOC-033.* Un projet DEVRAIT traduire les textes longs, comme la documentation, au moyen de fichiers {abbr-po-first} de GNU gettext.
+Chaque paragraphe DEVRAIT former une entrée.
+Un produit qui emploie gettext dans son code PEUT aussi garder ses messages d’interface dans des fichiers {abbr-po}.
+Un message qui emploie les pluriels de MessageFormat NE DOIT PAS employer aussi les formes plurielles de gettext.
+Bien des plateformes libres de traduction lisent ces fichiers en texte brut.
+Deux systèmes de pluriel dans un même message imposeraient deux jeux de règles.
+
+[[LOC-034]]
+*LOC-034.* Un nouveau travail NE DOIT PAS employer {abbr-xliff} 1.2.
+Un projet PEUT passer à {abbr-xliff} 2.2 dès que cette version devient une norme approuvée.
+Depuis la version 2.0, {abbr-xliff} a une autre structure de fichier, donc les outils doivent lire la version reçue.
+En novembre 2026, la version 2.2 est une spécification de comité, une étape avant la norme approuvée.
+
+[[LOC-035]]
+*LOC-035.* Les fichiers de traduction DOIVENT employer {abbr-utf-8-first}.
+Ils DOIVENT rester sous gestion des versions, à côté de la source qu’ils traduisent.
+Le nom de chaque fichier DOIT porter l’étiquette de sa langue, sous la forme qu’exige la plateforme.
+Les personnes qui révisent voient alors chaque changement de traduction dans une demande de fusion.
+L’étiquette dans le nom permet aux outils de trouver chaque langue sans liste à part.
+
+[[LOC-036]]
+*LOC-036.* Un fichier DOIT consigner l’état de chaque entrée.
+Dans les fichiers {abbr-po}, la marque `fuzzy` signale une entrée à réviser.
+Dans les fichiers {abbr-xliff} 2.1, l’attribut `state` de chaque segment vaut `initial`, `translated`, `reviewed` ou `final`.
+Les vérifications de version des règles LOC-030 et LOC-031 lisent cet état.
+Un état gardé dans le fichier suit la traduction dans tout outil.
+
+== Historique du document
+
+[cols="1,1,4",options="header"]
+|===
+|Version |Date |Changement
+|0.1.0 |2026-11-04 |Première version.
+|===
