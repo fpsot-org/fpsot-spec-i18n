@@ -9,9 +9,14 @@ Ces règles portent sur la langue et le sens d’écriture du texte, et sur l’
 *LOC-040.* Un produit DOIT déclarer la langue de chaque page ou document.
 En {abbr-html-first}, l’attribut `lang` de l’élément `html` le fait.
 Il DOIT aussi marquer chaque passage dans une autre langue avec sa propre étiquette de langue.
-Une réponse d’{abbr-api-first} qui contient du texte destiné aux personnes DOIT indiquer sa langue dans l’en-tête `Content-Language`.
 La langue déclarée DOIT être la langue réellement montrée, y compris après un repli.
 Les lecteurs d’écran, les moteurs de recherche et les outils de traduction s’appuient sur cette déclaration.
+
+Une réponse d’{abbr-api-first} DOIT indiquer dans l’en-tête `Content-Language` la langue du texte que le produit a choisie.
+Ce texte comprend les messages, les pages et les textes d’erreur.
+Les données qui portent leurs propres étiquettes de langue n’ont pas besoin d’un seul `Content-Language`.
+C’est le cas d’un champ qui contient toutes les langues.
+Chaque valeur nomme déjà sa langue, et un seul en-tête ne peut pas en nommer plusieurs.
 
 [[LOC-041]]
 *LOC-041.* Chaque page DOIT offrir un lien vers le même contenu dans chaque autre langue du produit.
@@ -38,10 +43,10 @@ Bien des personnes tapent le français sans accents sur un téléphone ou sur un
 == Sens d’écriture
 
 [[LOC-044]]
-*LOC-044.* Un produit DOIT être prêt pour les langues de droite à gauche, même avec l’anglais et le français seulement.
-Il DOIT fixer la direction de base dans le balisage, selon le paramètre régional, pas dans les feuilles de style.
-Les feuilles de style DOIVENT employer les côtés logiques `start` et `end` plutôt que `left` et `right`.
-Les icônes qui montrent une direction, comme les flèches, DOIVENT s’inverser dans un paramètre régional de droite à gauche.
+*LOC-044.* Un produit DEVRAIT être prêt pour les langues de droite à gauche, même avec l’anglais et le français seulement.
+Il DEVRAIT fixer la direction de base dans le balisage, selon le paramètre régional, pas dans les feuilles de style.
+Les feuilles de style DEVRAIENT employer les côtés logiques `start` et `end` plutôt que `left` et `right`.
+Les icônes qui montrent une direction, comme les flèches, DEVRAIENT s’inverser dans un paramètre régional de droite à gauche.
 Une personne qui contribue peut alors ajouter l’arabe ou l’hébreu avec des traductions seulement.
 Une mise en page fixée à gauche demanderait d’abord une refonte.
 

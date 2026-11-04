@@ -25,11 +25,11 @@ A stated version lets a reviewer explain a change in the output.
 == Dates, times and amounts
 
 [[LOC-012]]
-*LOC-012.* A product MUST show a date and time in the time zone that the reader expects.
-This is the zone of the person, or of the place that the value belongs to.
-It MUST name that zone with a name from the time zone database of the {abbr-iana-first}, such as `America/Toronto`.
+*LOC-012.* A product MUST show a date and time in the zone of the person or place it concerns.
+It MUST identify that zone by its name in the time zone database of the {abbr-iana-first}, such as `America/Toronto`.
 It SHOULD show the zone next to the time when readers may live in other zones.
-An offset alone does not follow daylight saving time.
+A zone shown to people MUST use the localized name of the {abbr-cldr}, such as "Eastern Time".
+An offset alone does not follow daylight saving time, and few people understand a database name.
 A deadline shown without its zone misleads a person in another province.
 
 [[LOC-013]]

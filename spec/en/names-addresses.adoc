@@ -14,7 +14,8 @@ Many people have one name only, several family names, or the family name first.
 A form built for one pattern rejects the others.
 
 [[LOC-051]]
-*LOC-051.* A name field MUST accept any Unicode letter and mark, spaces, hyphens and apostrophes.
+*LOC-051.* A name field MUST accept any Unicode letter and diacritical mark.
+It MUST also accept spaces, hyphens and apostrophes.
 It MUST accept a name of one character and SHOULD allow at least 100 characters.
 A product MUST store and show the name as the person wrote it, with no change of case.
 Names such as "D'Amours", "Lévesque-Côté" or "McNeil" lose their meaning when a system rewrites them.

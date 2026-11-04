@@ -63,7 +63,7 @@ Un produit NE DOIT PAS montrer une clé de message ou une chaîne vide à une pe
 Un message dans une langue proche aide plus qu’une clé technique.
 
 [[LOC-007]]
-*LOC-007.* Quand une page montre l’anglais et le français, le déploiement DOIT fixer celle qui vient en premier.
+*LOC-007.* Quand un écran ou un document montre l’anglais et le français, le déploiement DOIT fixer leur ordre.
 Par défaut, le français DOIT venir en premier au Québec, et l’anglais ailleurs au Canada.
 La règle fédérale sur l’ordre des langues officielles fonctionne de la même façon.
 Un ordre fixe par déploiement garde tous les écrans cohérents.

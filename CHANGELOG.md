@@ -18,3 +18,7 @@ and versions follow [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.h
 - Names and addresses: personal names, postal addresses and Canada Post formats (LOC-050 to LOC-055).
 - Comparison data with an international baseline, Canada and Québec rows.
 - A how-to guide, the agent skill, `llms.txt` and a book per language.
+
+### Known gaps
+
+- The Québec comparison does not yet cover the Charter of the French language, as amended by Bill 96 in 2022.

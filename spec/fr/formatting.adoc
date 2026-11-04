@@ -25,17 +25,17 @@ Une version indiquée permet d’expliquer un changement dans la sortie.
 == Dates, heures et montants
 
 [[LOC-012]]
-*LOC-012.* Un produit DOIT montrer une date et une heure dans le fuseau horaire qu’attend la personne.
-C’est son propre fuseau, ou celui du lieu dont parle la valeur.
-Il DOIT nommer ce fuseau selon la base des fuseaux horaires de l’{abbr-iana-first}, comme `America/Toronto`.
-Il DEVRAIT montrer le fuseau à côté de l’heure quand des lectrices et des lecteurs vivent dans d’autres fuseaux.
-Un décalage seul ne suit pas l’heure avancée.
+*LOC-012.* Un produit DOIT montrer une date et une heure dans le fuseau de la personne ou du lieu visé.
+Il DOIT désigner ce fuseau par son nom dans la base des fuseaux horaires de l’{abbr-iana-first}, comme `America/Toronto`.
+Il DEVRAIT montrer le fuseau à côté de l’heure quand le lectorat peut vivre dans d’autres fuseaux.
+Un fuseau montré aux personnes DOIT porter le nom localisé du {abbr-cldr}, comme « heure de l’Est ».
+Un décalage seul ne suit pas l’heure avancée, et peu de personnes comprennent un nom de la base.
 Une échéance montrée sans son fuseau induit en erreur une personne d’une autre province.
 
 [[LOC-013]]
-*LOC-013.* Un produit DOIT prendre la devise d’un montant dans les données, jamais dans le paramètre régional de la personne.
+*LOC-013.* Un produit DOIT prendre la monnaie d’un montant dans les données, jamais dans le paramètre régional de la personne.
 Une personne en `fr-CA` qui consulte un montant en dollars américains voit `1 234,56 $ US`.
-Un paramètre régional fixe la façon d’écrire un montant, pas sa devise.
+Un paramètre régional fixe la façon d’écrire un montant, pas sa monnaie.
 
 [[LOC-014]]
 *LOC-014.* Un produit NE DOIT PAS relire un texte mis en forme comme s’il s’agissait de données.
@@ -47,7 +47,7 @@ Un texte mis en forme pour une personne aurait un autre sens pour un autre progr
 == Tri
 
 [[LOC-015]]
-*LOC-015.* Un produit DOIT trier le texte affiché selon les règles de tri du {abbr-cldr} propres à chaque personne.
+*LOC-015.* Un produit DOIT trier le texte destiné aux personnes selon le tri du {abbr-cldr} de leur paramètre régional.
 Il NE DOIT PAS trier ce texte par point de code ou par octet.
 En français, un mot qui commence par `é` se range avec les mots en `e`, et non après `z`.
 Les personnes s’attendent à l’ordre de leur propre dictionnaire.

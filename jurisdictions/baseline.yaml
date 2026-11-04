@@ -44,7 +44,7 @@ rows:
   - id: LOC-010
     topic: formatting
     requirement: {en: "Dates, numbers, amounts and lists use CLDR data.", fr: "Les dates, les nombres, les montants et les listes emploient les données du CLDR."}
-    international: {en: "CLDR publishes the formats of dates, numbers, currencies and lists for each locale, with a new version about twice a year.", fr: "Le CLDR publie les formats des dates, des nombres, des devises et des listes de chaque paramètre régional, avec une nouvelle version environ deux fois par année."}
+    international: {en: "CLDR publishes the formats of dates, numbers, currencies and lists for each locale, with a new version once or twice a year.", fr: "Le CLDR publie les formats des dates, des nombres, des monnaies et des listes de chaque paramètre régional, avec une nouvelle version une ou deux fois par année."}
     international_source: {title: "Unicode CLDR 49 release", version: "49", date: "2026-10-22", url: "https://cldr.unicode.org/downloads/cldr-49", archive: "https://web.archive.org/web/20261027022544/https://cldr.unicode.org/downloads/cldr-49"}
     fpsot: {en: "A library that reads CLDR 49 or later. No hand-written patterns. The CLDR version is stated.", fr: "Une bibliothèque qui lit le CLDR 49 ou plus récent. Aucun modèle écrit à la main. La version du CLDR est indiquée."}
   - id: LOC-015
@@ -82,7 +82,7 @@ rows:
     requirement: {en: "Each page and passage declares its language.", fr: "Chaque page et chaque passage déclarent leur langue."}
     international: {en: "Set lang on the html element, and on each element whose content is in another language. The HTTP header alone does not set the language of the text.", fr: "Placer lang sur l’élément html, et sur chaque élément dont le contenu est dans une autre langue. L’en-tête HTTP seul ne fixe pas la langue du texte."}
     international_source: {title: "W3C, Declaring language in HTML", date: "2021-06-23", url: "https://www.w3.org/International/questions/qa-html-language-declarations", archive: "https://web.archive.org/web/20260918002647/https://www.w3.org/International/questions/qa-html-language-declarations"}
-    fpsot: {en: "lang on each page and passage, Content-Language on API responses, and the language actually shown.", fr: "lang sur chaque page et chaque passage, Content-Language sur les réponses d’API, et la langue réellement montrée."}
+    fpsot: {en: "lang on each page and passage, with the language actually shown. Content-Language on API responses for text whose language the product chose, not for data with its own language tags.", fr: "lang sur chaque page et chaque passage, avec la langue réellement montrée. Content-Language sur les réponses d’API pour le texte dont le produit a choisi la langue, pas pour les données qui portent leurs propres étiquettes de langue."}
   - id: LOC-041
     topic: markup
     requirement: {en: "Every page links to the same content in each other language.", fr: "Chaque page renvoie au même contenu dans chaque autre langue."}
@@ -100,7 +100,7 @@ rows:
     requirement: {en: "Layouts are ready for right-to-left languages.", fr: "Les mises en page sont prêtes pour les langues de droite à gauche."}
     international: {en: "Set the base direction with dir in the markup, not in style sheets. Use start and end rather than left and right.", fr: "Fixer la direction de base avec dir dans le balisage, et non dans les feuilles de style. Employer start et end plutôt que left et right."}
     international_source: {title: "W3C, Structural markup and right-to-left text in HTML", date: "2026-05-10", url: "https://www.w3.org/International/questions/qa-html-dir", archive: "https://web.archive.org/web/20260905105242/https://www.w3.org/International/questions/qa-html-dir"}
-    fpsot: {en: "Direction in markup from the locale, logical sides in style sheets, mirrored direction icons.", fr: "Direction dans le balisage d’après le paramètre régional, côtés logiques dans les feuilles de style, icônes de direction inversées."}
+    fpsot: {en: "Recommended: direction in markup from the locale, logical sides in style sheets, mirrored direction icons.", fr: "Recommandé : direction dans le balisage d’après le paramètre régional, côtés logiques dans les feuilles de style, icônes de direction inversées."}
   - id: LOC-050
     topic: names
     requirement: {en: "A name is not assumed to have a first and last part.", fr: "Un nom n’est pas supposé avoir un prénom et un nom de famille."}

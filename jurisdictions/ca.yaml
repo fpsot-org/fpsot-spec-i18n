@@ -22,7 +22,7 @@ rows:
     source: {title: "Treasury Board of Canada Secretariat, Directive on Official Languages for Communications and Services, section 6.6.3.6", version: "In effect since 2012-11-19", date: "2012-10-15", url: "https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164", archive: "https://web.archive.org/web/20260212070345/https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164"}
     last_checked: "2026-11-04"
   - id: LOC-054
-    text: {en: "The postal code is in capitals, in the form A1A 1A1, two spaces after the province or territory code. Municipality and street names are not translated.", fr: "Le code postal est en majuscules, sous la forme A1A 1A1, deux espaces après le code de la province ou du territoire. Les noms de municipalités et de rues ne sont pas traduits."}
-    status: same
+    text: {en: "The postal code is in capitals, in the form A1A 1A1, two spaces after the province or territory code. LOC-054 does not state the two spaces. Municipality and street names are not translated. The street types ST, AVE and BLVD may be translated to RUE, AV and BOUL, which LOC-055 does not allow.", fr: "Le code postal est en majuscules, sous la forme A1A 1A1, deux espaces après le code de la province ou du territoire. LOC-054 ne précise pas ces deux espaces. Les noms de municipalités et de rues ne sont pas traduits. Les génériques ST, AVE et BLVD peuvent se traduire par RUE, AV et BOUL, ce que LOC-055 ne permet pas."}
+    status: looser
     source: {title: "Canada Post, Addressing guidelines: Civic address", url: "https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page", archive: "https://web.archive.org/web/20260709050719/https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page"}
     last_checked: "2026-11-04"

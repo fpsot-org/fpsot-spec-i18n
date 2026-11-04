@@ -14,7 +14,8 @@ Bien des personnes n’ont qu’un nom, ont plusieurs noms de famille ou placent
 Un formulaire conçu pour un seul modèle rejette les autres.
 
 [[LOC-051]]
-*LOC-051.* Un champ de nom DOIT accepter toute lettre Unicode, les accents, les espaces, les traits d’union et les apostrophes.
+*LOC-051.* Un champ de nom DOIT accepter toute lettre et tout signe diacritique Unicode.
+Il DOIT aussi accepter les espaces, les traits d’union et les apostrophes.
 Il DOIT accepter un nom d’un seul caractère et DEVRAIT permettre au moins 100 caractères.
 Un produit DOIT conserver et montrer le nom tel que la personne l’a écrit, sans changer la casse.
 Des noms comme « D’Amours », « Lévesque-Côté » ou « McNeil » perdent leur sens quand un système les réécrit.
