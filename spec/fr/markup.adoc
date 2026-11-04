@@ -1,0 +1,67 @@
+= Texte, balisage et sens d’écriture
+include::_fpsot-terms.adoc[]
+
+Ces règles portent sur la langue et le sens d’écriture du texte, et sur l’intégrité des caractères.
+
+== Langue du contenu
+
+[[LOC-040]]
+*LOC-040.* Un produit DOIT déclarer la langue de chaque page ou document.
+En {abbr-html-first}, l’attribut `lang` de l’élément `html` le fait.
+Il DOIT aussi marquer chaque passage dans une autre langue avec sa propre étiquette de langue.
+Une réponse d’{abbr-api-first} qui contient du texte destiné aux personnes DOIT indiquer sa langue dans l’en-tête `Content-Language`.
+La langue déclarée DOIT être la langue réellement montrée, y compris après un repli.
+Les lecteurs d’écran, les moteurs de recherche et les outils de traduction s’appuient sur cette déclaration.
+
+[[LOC-041]]
+*LOC-041.* Chaque page DOIT offrir un lien vers le même contenu dans chaque autre langue du produit.
+Le lien DOIT nommer chaque langue dans cette langue, comme « Français » et « English », avec l’étiquette de langue correspondante.
+Un produit NE DOIT PAS employer de drapeaux pour représenter les langues.
+Une personne qui ne peut pas lire la page actuelle trouve quand même sa langue.
+Un drapeau représente un pays, et un pays peut avoir plusieurs langues.
+
+== Caractères
+
+[[LOC-042]]
+*LOC-042.* Un produit DOIT conserver, envoyer et montrer le texte en Unicode, en {abbr-utf-8-first}.
+Il DOIT garder intacts les accents et les autres signes diacritiques, de la saisie à la sortie.
+Cela vaut aussi pour les courriels, les fichiers et les exportations.
+Un produit NE DOIT PAS retirer les accents pour convenir à un vieux système.
+Un nom sans ses accents est un autre mot, et parfois une autre personne.
+
+[[LOC-043]]
+*LOC-043.* Un produit DEVRAIT comparer et chercher le texte sous la forme de normalisation C d’Unicode.
+Une recherche DEVRAIT trouver un mot avec ou sans ses accents.
+La même lettre `é` peut arriver sous la forme d’un caractère ou de deux.
+Bien des personnes tapent le français sans accents sur un téléphone ou sur un clavier anglais.
+
+== Sens d’écriture
+
+[[LOC-044]]
+*LOC-044.* Un produit DOIT être prêt pour les langues de droite à gauche, même avec l’anglais et le français seulement.
+Il DOIT fixer la direction de base dans le balisage, selon le paramètre régional, pas dans les feuilles de style.
+Les feuilles de style DOIVENT employer les côtés logiques `start` et `end` plutôt que `left` et `right`.
+Les icônes qui montrent une direction, comme les flèches, DOIVENT s’inverser dans un paramètre régional de droite à gauche.
+Une personne qui contribue peut alors ajouter l’arabe ou l’hébreu avec des traductions seulement.
+Une mise en page fixée à gauche demanderait d’abord une refonte.
+
+[[LOC-045]]
+*LOC-045.* Un produit DOIT isoler le texte de sens d’écriture inconnu, comme les noms saisis par les personnes.
+En {abbr-html}, l’élément `bdi` ou l’attribut `dir="auto"` le fait.
+Sinon, un nom en arabe dans une phrase en français changerait l’ordre des mots autour de lui.
+
+== Mise en page
+
+[[LOC-046]]
+*LOC-046.* Un produit NE DOIT PAS placer dans des images du texte que les personnes lisent.
+Ses mises en page DOIVENT laisser au texte la place de s’allonger, sans largeur fixe prévue pour l’anglais.
+Le texte dans une image échappe à la traduction, et les personnes ne peuvent ni l’agrandir ni le copier.
+Le texte français est souvent plus long que le même texte en anglais.
+
+== Historique du document
+
+[cols="1,1,4",options="header"]
+|===
+|Version |Date |Changement
+|0.1.0 |2026-11-04 |Première version.
+|===

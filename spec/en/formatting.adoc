@@ -1,0 +1,61 @@
+= Formatting
+include::_fpsot-terms.adoc[]
+
+These rules cover how a product shows a date, a number or an amount to a person.
+They apply to display only.
+Programs exchange values in forms that do not depend on a {term-locale}, such as {abbr-rfc-first} 3339 dates and times.
+
+== Locale data
+
+[[LOC-010]]
+*LOC-010.* A product MUST format text for display with the data of the {abbr-cldr-first}.
+This covers dates and times, numbers and percentages, currency amounts, units and lists.
+It MUST use a library that reads this data, such as {abbr-icu-first} or the formatting classes of the platform.
+A product MUST NOT write its own date or number patterns for a locale.
+The same amount reads `$1,234.56` in `en-CA` and `1 234,56 $` in `fr-CA`.
+Hand-written patterns get such details wrong and drift from the shared data.
+
+[[LOC-011]]
+*LOC-011.* A product SHOULD use {abbr-cldr} 49 or later.
+It MUST state its {abbr-cldr} version in its release notes.
+Tests SHOULD compare formatted text with the output of the library, not with strings typed by hand.
+Each {abbr-cldr} version fixes and changes some formats, such as the space characters inside numbers.
+A stated version lets a reviewer explain a change in the output.
+
+== Dates, times and amounts
+
+[[LOC-012]]
+*LOC-012.* A product MUST show a date and time in the time zone that the reader expects.
+This is the zone of the person, or of the place that the value belongs to.
+It MUST name that zone with a name from the time zone database of the {abbr-iana-first}, such as `America/Toronto`.
+It SHOULD show the zone next to the time when readers may live in other zones.
+An offset alone does not follow daylight saving time.
+A deadline shown without its zone misleads a person in another province.
+
+[[LOC-013]]
+*LOC-013.* A product MUST take the currency of an amount from the data, never from the locale of the person.
+A `fr-CA` reader who looks at an amount in United States dollars sees `1 234,56 $ US`.
+A locale sets how to write an amount, not which currency it is in.
+
+[[LOC-014]]
+*LOC-014.* A product MUST NOT read formatted text back as data.
+A date or number field MUST turn the entry into a value free of locale conventions.
+It does so before it stores or sends that value.
+The comma is a decimal sign in French and a group sign in English.
+Text formatted for one reader would mean something else to another program.
+
+== Sorting
+
+[[LOC-015]]
+*LOC-015.* A product MUST sort text for people with the collation rules of the {abbr-cldr} for their locale.
+It MUST NOT sort such text by code point or by byte.
+In French, a word that starts with `é` belongs with the words in `e`, not after `z`.
+Readers expect the order of their own dictionary.
+
+== Document history
+
+[cols="1,1,4",options="header"]
+|===
+|Version |Date |Change
+|0.1.0 |2026-11-04 |First version.
+|===

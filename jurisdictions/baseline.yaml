@@ -1,12 +1,115 @@
 # Comparison data. The format is defined by fpsot-spec-doc (model/jurisdiction.yaml).
-# This example row compares requirement TPL-001. Replace it with the rows of this specification.
-# Add one file per jurisdiction, such as ca.yaml or ca/qc.yaml, only when a source exists.
 topics:
-  keywords: {en: Requirement keywords, fr: Mots clés des exigences}
+  language-tags: {en: Language tags, fr: Étiquettes de langue}
+  negotiation: {en: Locale negotiation and fallback, fr: Négociation et repli}
+  bilingual-display: {en: Two languages on one screen, fr: Deux langues sur un même écran}
+  formatting: {en: Formatting and sorting, fr: Mise en forme et tri}
+  messages: {en: Messages and plurals, fr: Messages et pluriels}
+  translation: {en: Translation and translation files, fr: Traduction et fichiers de traduction}
+  markup: {en: Language markup and characters, fr: Balisage de la langue et caractères}
+  direction: {en: Text direction, fr: Sens d’écriture}
+  names: {en: Personal names, fr: Noms de personnes}
+  addresses: {en: Postal addresses, fr: Adresses postales}
 rows:
-  - id: TPL-001
-    topic: keywords
-    requirement: {en: Use the BCP 14 keywords., fr: Utiliser les mots clés du BCP 14.}
-    international: {en: "BCP 14 defines MUST, SHOULD and MAY. Only the capital forms carry that meaning.", fr: "Le BCP 14 définit MUST, SHOULD et MAY. Seules les majuscules ont ce sens."}
-    international_source: {title: "RFC 8174, Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words (BCP 14)", version: "BCP 14", date: "2017-05", url: "https://www.rfc-editor.org/info/rfc8174", archive: "https://web.archive.org/web/20261103005743/https://www.rfc-editor.org/info/rfc8174/"}
-    fpsot: {en: "Keywords in capitals, with a fixed French mapping.", fr: "Mots clés en majuscules, avec une correspondance française fixe."}
+  - id: LOC-001
+    topic: language-tags
+    requirement: {en: "Every language and locale has a valid BCP 47 tag.", fr: "Chaque langue et chaque paramètre régional a une étiquette BCP 47 valide."}
+    international: {en: "A tag joins subtags from one shared registry: language, then optional script, region and variants. Case carries no meaning, but a usual case form exists.", fr: "Une étiquette joint des sous-étiquettes d’un registre commun : la langue, puis l’écriture, la région et les variantes facultatives. La casse n’a pas de sens, mais une forme habituelle existe."}
+    international_source: {title: "RFC 5646, Tags for Identifying Languages", version: "BCP 47", date: "2009-09", url: "https://www.rfc-editor.org/info/rfc5646", archive: "https://web.archive.org/web/20261027004131/https://www.rfc-editor.org/info/rfc5646/"}
+    fpsot: {en: "BCP 47 tags, valid against the registry, in the usual case, and as short as possible.", fr: "Étiquettes BCP 47 valides selon le registre, dans la casse habituelle et aussi courtes que possible."}
+  - id: LOC-004
+    topic: negotiation
+    requirement: {en: "Each deployment sets one default locale.", fr: "Chaque déploiement fixe un paramètre régional par défaut."}
+    international: {en: "The lookup scheme ends with a default value that the application chooses. No standard says which language that default is.", fr: "La méthode de recherche se termine par une valeur par défaut que choisit l’application. Aucune norme ne dit quelle langue choisir."}
+    international_source: {title: "RFC 4647, Matching of Language Tags", version: "BCP 47", date: "2006-09", url: "https://www.rfc-editor.org/info/rfc4647", archive: "https://web.archive.org/web/20261027030853/https://www.rfc-editor.org/info/rfc4647/"}
+    fpsot: {en: "en-CA or fr-CA per deployment. A deployment that serves the public in Québec should choose fr-CA.", fr: "en-CA ou fr-CA par déploiement. Un déploiement qui sert le public au Québec devrait choisir fr-CA."}
+  - id: LOC-005
+    topic: negotiation
+    requirement: {en: "The locale comes from the choice of the person first, then the browser.", fr: "Le paramètre régional vient d’abord du choix de la personne, puis du navigateur."}
+    international: {en: "Accept-Language is a first guess only. Save the choice of the person and let them change language and regional settings.", fr: "L’en-tête Accept-Language n’est qu’une première estimation. Il faut enregistrer le choix de la personne et lui permettre de changer de langue et de réglages régionaux."}
+    international_source: {title: "W3C, Accept-Language used for locale setting", date: "2016-02-26", url: "https://www.w3.org/International/questions/qa-accept-lang-locales", archive: "https://web.archive.org/web/20260221230337/https://www.w3.org/International/questions/qa-accept-lang-locales"}
+    fpsot: {en: "Choice on the page, then saved preference, then Accept-Language, then the deployment default. Never a guess from location.", fr: "Choix dans la page, puis préférence enregistrée, puis Accept-Language, puis la valeur par défaut. Jamais de déduction d’après le lieu."}
+  - id: LOC-006
+    topic: negotiation
+    requirement: {en: "Missing messages fall back along a chain.", fr: "Les messages manquants suivent une chaîne de repli."}
+    international: {en: "Lookup removes subtags from the end of the requested tag until a match is found, then uses a default.", fr: "La recherche retire les sous-étiquettes de la fin de l’étiquette demandée jusqu’à une correspondance, puis emploie une valeur par défaut."}
+    international_source: {title: "RFC 4647, Matching of Language Tags", version: "BCP 47", date: "2006-09", url: "https://www.rfc-editor.org/info/rfc4647", archive: "https://web.archive.org/web/20261027030853/https://www.rfc-editor.org/info/rfc4647/"}
+    fpsot: {en: "fr-CA, then fr, then the deployment default. Never a raw key or an empty string.", fr: "fr-CA, puis fr, puis la valeur par défaut du déploiement. Jamais une clé brute ni une chaîne vide."}
+  - id: LOC-007
+    topic: bilingual-display
+    requirement: {en: "The deployment sets which language comes first.", fr: "Le déploiement fixe la langue qui vient en premier."}
+    international: {en: "BCP 47 identifies languages. It sets no order between two languages shown together.", fr: "Le BCP 47 désigne les langues. Il ne fixe aucun ordre entre deux langues montrées ensemble."}
+    international_source: {title: "RFC 5646, Tags for Identifying Languages", version: "BCP 47", date: "2009-09", url: "https://www.rfc-editor.org/info/rfc5646", archive: "https://web.archive.org/web/20261027004131/https://www.rfc-editor.org/info/rfc5646/"}
+    fpsot: {en: "French first for a deployment in Québec, English first elsewhere in Canada.", fr: "Le français en premier pour un déploiement au Québec, l’anglais en premier ailleurs au Canada."}
+  - id: LOC-010
+    topic: formatting
+    requirement: {en: "Dates, numbers, amounts and lists use CLDR data.", fr: "Les dates, les nombres, les montants et les listes emploient les données du CLDR."}
+    international: {en: "CLDR publishes the formats of dates, numbers, currencies and lists for each locale, with a new version about twice a year.", fr: "Le CLDR publie les formats des dates, des nombres, des devises et des listes de chaque paramètre régional, avec une nouvelle version environ deux fois par année."}
+    international_source: {title: "Unicode CLDR 49 release", version: "49", date: "2026-10-22", url: "https://cldr.unicode.org/downloads/cldr-49", archive: "https://web.archive.org/web/20261027022544/https://cldr.unicode.org/downloads/cldr-49"}
+    fpsot: {en: "A library that reads CLDR 49 or later. No hand-written patterns. The CLDR version is stated.", fr: "Une bibliothèque qui lit le CLDR 49 ou plus récent. Aucun modèle écrit à la main. La version du CLDR est indiquée."}
+  - id: LOC-015
+    topic: formatting
+    requirement: {en: "Text for people sorts by the rules of their locale.", fr: "Le texte destiné aux personnes se trie selon les règles de leur paramètre régional."}
+    international: {en: "CLDR holds collation data per locale, built on the Unicode collation algorithm.", fr: "Le CLDR contient les données de tri de chaque paramètre régional, fondées sur l’algorithme de tri d’Unicode."}
+    international_source: {title: "Unicode CLDR 49 release", version: "49", date: "2026-10-22", url: "https://cldr.unicode.org/downloads/cldr-49", archive: "https://web.archive.org/web/20261027022544/https://cldr.unicode.org/downloads/cldr-49"}
+    fpsot: {en: "CLDR collation for the locale of the reader. Never code point or byte order.", fr: "Tri du CLDR pour le paramètre régional de la personne. Jamais l’ordre des points de code ou des octets."}
+  - id: LOC-023
+    topic: messages
+    requirement: {en: "Messages with numbers use plural categories.", fr: "Les messages avec des nombres emploient les catégories de pluriel."}
+    international: {en: "MessageFormat 2 selects a variant of a message from the plural category of a number. The categories come from CLDR plural rules.", fr: "MessageFormat 2 choisit une variante du message selon la catégorie de pluriel d’un nombre. Les catégories viennent des règles de pluriel du CLDR."}
+    international_source: {title: "UTS #35, Part 9: MessageFormat", version: "CLDR 49", date: "2026-10-21", url: "https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html", archive: "https://web.archive.org/web/20261027022518/https://www.unicode.org/reports/tr35/tr35-messageFormat.html"}
+    fpsot: {en: "ICU MessageFormat plurals from CLDR rules. MessageFormat 2 where the library has a stable interface. No test for 1 in code.", fr: "Pluriels MessageFormat d’ICU selon les règles du CLDR. MessageFormat 2 là où la bibliothèque offre une interface stable. Aucun test de la valeur 1 dans le code."}
+  - id: LOC-030
+    topic: translation
+    requirement: {en: "Every text exists in English and French before a release.", fr: "Chaque texte existe en anglais et en français avant une version."}
+    international: {en: "No international standard sets which languages a product offers. An XLIFF file carries one source and one target language, in any pair.", fr: "Aucune norme internationale ne fixe les langues d’un produit. Un fichier XLIFF porte une langue source et une langue cible, quelle que soit la paire."}
+    international_source: {title: "XLIFF Version 2.1, OASIS Standard", version: "2.1", date: "2018-02-13", url: "https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html", archive: "https://web.archive.org/web/20260702061048/https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html"}
+    fpsot: {en: "Both languages, with equal quality. The release checks fail when one is missing.", fr: "Les deux langues, avec une qualité égale. Les vérifications de version échouent quand l’une manque."}
+  - id: LOC-032
+    topic: translation
+    requirement: {en: "Interface messages go to translators as XLIFF 2.1.", fr: "Les messages d’interface vont aux personnes qui traduisent en XLIFF 2.1."}
+    international: {en: "XLIFF 2.1 holds source and target text in units and segments, with a state for each segment. Version 2.2 is a committee specification.", fr: "XLIFF 2.1 range le texte source et cible en unités et en segments, avec un état pour chaque segment. La version 2.2 est une spécification de comité."}
+    international_source: {title: "XLIFF Version 2.1, OASIS Standard", version: "2.1", date: "2018-02-13", url: "https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html", archive: "https://web.archive.org/web/20260702061048/https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html"}
+    fpsot: {en: "Platform catalogues in the repository. XLIFF 2.1 for exchange with translation tools. No XLIFF 1.2 for new work.", fr: "Catalogues de plateforme dans le dépôt. XLIFF 2.1 pour les échanges avec les outils de traduction. Aucun XLIFF 1.2 pour un nouveau travail."}
+  - id: LOC-033
+    topic: translation
+    requirement: {en: "Long text is translated through PO files.", fr: "Les textes longs se traduisent au moyen de fichiers PO."}
+    international: {en: "A PO entry pairs a source string with its translation. It can hold a context, plural forms, comments and a fuzzy flag for entries to review.", fr: "Une entrée PO associe une chaîne source à sa traduction. Elle peut porter un contexte, des formes plurielles, des commentaires et une marque fuzzy pour les entrées à réviser."}
+    international_source: {title: "GNU gettext manual, The Format of PO Files", version: "1.0", url: "https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html", archive: "https://web.archive.org/web/20261018135650/https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html"}
+    fpsot: {en: "PO files, one entry per paragraph, for documentation and web pages. Never two plural systems in one message.", fr: "Fichiers PO, une entrée par paragraphe, pour la documentation et les pages Web. Jamais deux systèmes de pluriel dans un même message."}
+  - id: LOC-040
+    topic: markup
+    requirement: {en: "Each page and passage declares its language.", fr: "Chaque page et chaque passage déclarent leur langue."}
+    international: {en: "Set lang on the html element, and on each element whose content is in another language. The HTTP header alone does not set the language of the text.", fr: "Placer lang sur l’élément html, et sur chaque élément dont le contenu est dans une autre langue. L’en-tête HTTP seul ne fixe pas la langue du texte."}
+    international_source: {title: "W3C, Declaring language in HTML", date: "2021-06-23", url: "https://www.w3.org/International/questions/qa-html-language-declarations", archive: "https://web.archive.org/web/20260918002647/https://www.w3.org/International/questions/qa-html-language-declarations"}
+    fpsot: {en: "lang on each page and passage, Content-Language on API responses, and the language actually shown.", fr: "lang sur chaque page et chaque passage, Content-Language sur les réponses d’API, et la langue réellement montrée."}
+  - id: LOC-041
+    topic: markup
+    requirement: {en: "Every page links to the same content in each other language.", fr: "Chaque page renvoie au même contenu dans chaque autre langue."}
+    international: {en: "Give people a visible way to change the language, since the browser setting can be wrong.", fr: "Offrir aux personnes un moyen visible de changer de langue, car le réglage du navigateur peut être faux."}
+    international_source: {title: "W3C, Accept-Language used for locale setting", date: "2016-02-26", url: "https://www.w3.org/International/questions/qa-accept-lang-locales", archive: "https://web.archive.org/web/20260221230337/https://www.w3.org/International/questions/qa-accept-lang-locales"}
+    fpsot: {en: "A link on every page, naming each language in that language, with no flags.", fr: "Un lien sur chaque page, qui nomme chaque langue dans cette langue, sans drapeau."}
+  - id: LOC-042
+    topic: markup
+    requirement: {en: "Text is Unicode in UTF-8, with every diacritic kept.", fr: "Le texte est en Unicode et en UTF-8, avec tous ses signes diacritiques."}
+    international: {en: "Choose UTF-8 for content and declare it.", fr: "Choisir UTF-8 pour le contenu et le déclarer."}
+    international_source: {title: "W3C, Choosing and applying a character encoding", date: "2016-01-26", url: "https://www.w3.org/International/questions/qa-choosing-encodings", archive: "https://web.archive.org/web/20261025041230/https://www.w3.org/International/questions/qa-choosing-encodings"}
+    fpsot: {en: "UTF-8 from input to output, including emails and exports. Accents are never removed.", fr: "UTF-8 de la saisie à la sortie, y compris les courriels et les exportations. Les accents ne sont jamais retirés."}
+  - id: LOC-044
+    topic: direction
+    requirement: {en: "Layouts are ready for right-to-left languages.", fr: "Les mises en page sont prêtes pour les langues de droite à gauche."}
+    international: {en: "Set the base direction with dir in the markup, not in style sheets. Use start and end rather than left and right.", fr: "Fixer la direction de base avec dir dans le balisage, et non dans les feuilles de style. Employer start et end plutôt que left et right."}
+    international_source: {title: "W3C, Structural markup and right-to-left text in HTML", date: "2026-05-10", url: "https://www.w3.org/International/questions/qa-html-dir", archive: "https://web.archive.org/web/20260905105242/https://www.w3.org/International/questions/qa-html-dir"}
+    fpsot: {en: "Direction in markup from the locale, logical sides in style sheets, mirrored direction icons.", fr: "Direction dans le balisage d’après le paramètre régional, côtés logiques dans les feuilles de style, icônes de direction inversées."}
+  - id: LOC-050
+    topic: names
+    requirement: {en: "A name is not assumed to have a first and last part.", fr: "Un nom n’est pas supposé avoir un prénom et un nom de famille."}
+    international: {en: "Prefer one field for the full name. Do not require a family name, and do not assume the given name comes first.", fr: "Préférer un seul champ pour le nom complet. Ne pas exiger de nom de famille, ni supposer que le prénom vient en premier."}
+    international_source: {title: "W3C, Personal names around the world", date: "2016-01-24", url: "https://www.w3.org/International/questions/qa-personal-names", archive: "https://web.archive.org/web/20261005230211/https://www.w3.org/International/questions/qa-personal-names"}
+    fpsot: {en: "One full-name field. Optional parts only when a process needs them, labelled Given names and Family name.", fr: "Un seul champ pour le nom complet. Parties facultatives seulement quand un processus en a besoin, libellées Prénoms et Nom de famille."}
+  - id: LOC-054
+    topic: addresses
+    requirement: {en: "Canadian addresses follow Canada Post.", fr: "Les adresses canadiennes suivent Postes Canada."}
+    international: {en: "The Canada sheet of the Universal Postal Union puts municipality, province code and postal code on one line. It prefers capitals, no punctuation and at most 40 characters per line.", fr: "La fiche Canada de l’Union postale universelle place la municipalité, le code de province et le code postal sur une ligne. Elle préfère les majuscules, aucune ponctuation et au plus 40 caractères par ligne."}
+    international_source: {title: "Universal Postal Union, Postal addressing systems: Canada", date: "2014-09", url: "https://www.upu.int/UPU/media/upu/PostalEntitiesFiles/addressingUnit/canEn.pdf", archive: "https://web.archive.org/web/20260606074343/https://www.upu.int/UPU/media/upu/PostalEntitiesFiles/addressingUnit/CANEn.pdf"}
+    fpsot: {en: "Canada Post format. Postal code in capitals as A1A 1A1. Capitals and no punctuation allowed on mailing labels.", fr: "Format de Postes Canada. Code postal en majuscules sous la forme A1A 1A1. Majuscules et absence de ponctuation permises sur les étiquettes d’adresse."}

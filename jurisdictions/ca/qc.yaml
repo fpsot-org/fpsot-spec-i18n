@@ -1,0 +1,23 @@
+code: CA-QC
+name: {en: Québec, fr: Québec}
+rows:
+  - id: LOC-004
+    text: {en: "Content for Québec.ca is written first in French, the preferred language of communication of the Québec government.", fr: "Le contenu de Québec.ca est d’abord rédigé en français, langue de communication privilégiée du gouvernement du Québec."}
+    status: stricter
+    source: {title: "Système de design gouvernemental, Langue et traduction", date: "2026-10-13", url: "https://design.quebec.ca/contenu/orientations-generales/langue-traduction", archive: "https://web.archive.org/web/20250804161651/https://design.quebec.ca/contenu/orientations-generales/langue-traduction"}
+    last_checked: "2026-11-04"
+  - id: LOC-015
+    text: {en: "Full use of French in government technology includes French sorting conventions.", fr: "L’utilisation intégrale du français dans les technologies de l’État comprend les conventions françaises de tri."}
+    status: same
+    source: {title: "Politique d'utilisation du français dans les technologies de l'information et des communications", version: "Adopted 2006-12", date: "2026-07-16", url: "https://www.quebec.ca/gouvernement/ministeres-organismes/langue-francaise/publications/politique-utilisation-francais-tic", archive: "https://web.archive.org/web/20110520130456/http://www.spl.gouv.qc.ca/documentation/loisreglementspolitiques/puftic/"}
+    last_checked: "2026-11-04"
+  - id: LOC-030
+    text: {en: "Content is written in French first. The deputy minister or the head of the body decides which content to translate.", fr: "Le contenu est d’abord rédigé en français. Le sous-ministre ou la personne qui dirige l’organisme décide des contenus à traduire."}
+    status: looser
+    source: {title: "Système de design gouvernemental, Langue et traduction", date: "2026-10-13", url: "https://design.quebec.ca/contenu/orientations-generales/langue-traduction", archive: "https://web.archive.org/web/20250804161651/https://design.quebec.ca/contenu/orientations-generales/langue-traduction"}
+    last_checked: "2026-11-04"
+  - id: LOC-042
+    text: {en: "Government bodies acquire software that allows full use of French, including diacritics, ligatures and French typographic conventions. Other scripts are not covered.", fr: "Les ministères et organismes acquièrent des logiciels qui permettent l’utilisation intégrale du français, y compris les signes diacritiques, les ligatures et les conventions typographiques françaises. Les autres écritures ne sont pas visées."}
+    status: looser
+    source: {title: "Politique d'utilisation du français dans les technologies de l'information et des communications", version: "Adopted 2006-12", date: "2026-07-16", url: "https://www.quebec.ca/gouvernement/ministeres-organismes/langue-francaise/publications/politique-utilisation-francais-tic", archive: "https://web.archive.org/web/20110520130456/http://www.spl.gouv.qc.ca/documentation/loisreglementspolitiques/puftic/"}
+    last_checked: "2026-11-04"

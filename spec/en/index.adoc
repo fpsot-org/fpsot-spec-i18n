@@ -1,8 +1,22 @@
-= Specification title
+= FPSOT internationalization specification
 include::_fpsot-terms.adoc[]
 
-Replace this page with the normative text of the specification.
-Start with the scope, then the conformance classes, then the requirements.
+This specification sets how the products of {abbr-fpsot-first} show text and numbers in the language of each person.
+It also sets how they store messages and exchange translations.
+Every {abbr-fpsot} product ships in Canadian English and Canadian French, and the rules let contributors add any other {term-locale}.
+
+The rules come in six parts.
+
+* xref:language-tags.adoc[Language tags and locales] name languages and choose the one a person sees.
+* xref:formatting.adoc[Formatting] covers how dates, numbers and amounts look.
+* xref:messages.adoc[Messages] keep text out of the code and handle plurals and gender.
+* xref:translation.adoc[Translation] covers both languages and the translation files.
+* xref:markup.adoc[Text, markup and direction] declares languages and keeps characters intact.
+* xref:names-addresses.adoc[Names and addresses] covers personal names and postal addresses.
+
+The {abbr-fpsot} writing specification sets how to write the text itself.
+This specification covers display only.
+It does not set how programs store dates, amounts or text in two languages.
 
 == Conformance
 
@@ -11,24 +25,46 @@ ____
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 (RFC 2119, RFC 8174) when, and only when, they appear in all capitals, as shown here.
 ____
 
-The French version uses the keywords of requirement WRT-011 of the {abbr-fpsot-first} writing specification.
+The keywords follow requirement WRT-010 of the {abbr-fpsot} writing specification.
+The French version uses the French keywords of WRT-011.
 
-== Requirements
+A product conforms to this specification when it meets every MUST rule.
+Rules that name an {abbr-fpsot} product, such as LOC-003 and LOC-030, apply to products that {abbr-fpsot} publishes.
+Other products meet them when they claim the same two languages.
 
-Give each requirement an anchor line with its ID, directly above its paragraph.
-The anchor looks like `+[[XYZ-001]]+`.
-The example below shows the form. Replace it with the first requirement.
+== Sources
 
-[[TPL-001]]
-*TPL-001.* A normative statement MUST use one of the {abbr-bcp-first} 14 keywords in capitals.
-The keyword gives the rule its strength.
+This specification summarises these outside sources in its own words.
+Each row gives the version and date that the publisher states, a link, and an archived copy.
+
+[cols="3,2,2,1",options="header"]
+|===
+|Source |Version |Date |Archive
+|link:https://www.rfc-editor.org/info/rfc5646[RFC 5646, Tags for Identifying Languages] |BCP 47 |2009-09 |link:https://web.archive.org/web/20261027004131/https://www.rfc-editor.org/info/rfc5646/[copy]
+|link:https://www.rfc-editor.org/info/rfc4647[RFC 4647, Matching of Language Tags] |BCP 47 |2006-09 |link:https://web.archive.org/web/20261027030853/https://www.rfc-editor.org/info/rfc4647/[copy]
+|link:https://cldr.unicode.org/downloads/cldr-49[Unicode CLDR 49 release] |49 |2026-10-22 |link:https://web.archive.org/web/20261027022544/https://cldr.unicode.org/downloads/cldr-49[copy]
+|link:https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html[UTS #35, Part 9: MessageFormat] |CLDR 49, revision 79 |2026-10-21 |link:https://web.archive.org/web/20261027022518/https://www.unicode.org/reports/tr35/tr35-messageFormat.html[copy]
+|link:https://unicode-org.github.io/icu/download/79.html[ICU 79 release] |79 |2026-10-22 |link:https://web.archive.org/web/20261027030033/https://unicode-org.github.io/icu/download/79.html[copy]
+|link:https://unicode-org.github.io/icu/userguide/format_parse/messages/[ICU User Guide, Formatting Messages] |Not stated |Not stated |link:https://web.archive.org/web/20261022130913/https://unicode-org.github.io/icu/userguide/format_parse/messages/[copy]
+|link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[XLIFF Version 2.1, OASIS Standard] |2.1 |2018-02-13 |link:https://web.archive.org/web/20260702061048/https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[copy]
+|link:https://docs.oasis-open.org/xliff/xliff-core/v2.2/xliff-core-v2.2-part1.html[XLIFF Version 2.2, Part 1: Core, Committee Specification 01] |2.2 |2025-03-13 |link:https://web.archive.org/web/20260902173033/https://docs.oasis-open.org/xliff/xliff-core/v2.2/xliff-core-v2.2-part1.html[copy]
+|link:https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html[GNU gettext manual, The Format of PO Files] |1.0 |Not stated |link:https://web.archive.org/web/20261018135650/https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html[copy]
+|link:https://www.w3.org/International/questions/qa-personal-names[W3C, Personal names around the world] |Not stated |2016-01-24 |link:https://web.archive.org/web/20261005230211/https://www.w3.org/International/questions/qa-personal-names[copy]
+|link:https://www.w3.org/International/questions/qa-html-language-declarations[W3C, Declaring language in HTML] |Not stated |2021-06-23 |link:https://web.archive.org/web/20260918002647/https://www.w3.org/International/questions/qa-html-language-declarations[copy]
+|link:https://www.w3.org/International/questions/qa-html-dir[W3C, Structural markup and right-to-left text in HTML] |Not stated |2026-05-10 |link:https://web.archive.org/web/20260905105242/https://www.w3.org/International/questions/qa-html-dir[copy]
+|link:https://www.w3.org/International/questions/qa-accept-lang-locales[W3C, Accept-Language used for locale setting] |Not stated |2016-02-26 |link:https://web.archive.org/web/20260221230337/https://www.w3.org/International/questions/qa-accept-lang-locales[copy]
+|link:https://www.w3.org/International/questions/qa-choosing-encodings[W3C, Choosing and applying a character encoding] |Not stated |2016-01-26 |link:https://web.archive.org/web/20261025041230/https://www.w3.org/International/questions/qa-choosing-encodings[copy]
+|link:https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164[Treasury Board of Canada Secretariat, Directive on Official Languages for Communications and Services] |In effect since 2012-11-19 |2012-10-15 |link:https://web.archive.org/web/20260212070345/https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164[copy]
+|link:https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Canada Post, Addressing guidelines: Civic address] |Not stated |Not stated |link:https://web.archive.org/web/20260709050719/https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[copy]
+|link:https://www.upu.int/UPU/media/upu/PostalEntitiesFiles/addressingUnit/canEn.pdf[Universal Postal Union, Postal addressing systems: Canada] |Not stated |2014-09 |link:https://web.archive.org/web/20260606074343/https://www.upu.int/UPU/media/upu/PostalEntitiesFiles/addressingUnit/CANEn.pdf[copy]
+|link:https://design.quebec.ca/contenu/orientations-generales/langue-traduction[Système de design gouvernemental, Langue et traduction] |Not stated |2026-10-13 |link:https://web.archive.org/web/20250804161651/https://design.quebec.ca/contenu/orientations-generales/langue-traduction[copy]
+|link:https://www.quebec.ca/gouvernement/ministeres-organismes/langue-francaise/publications/politique-utilisation-francais-tic[Politique d'utilisation du français dans les technologies de l'information et des communications] |Adopted 2006-12 |2026-07-16 |link:https://web.archive.org/web/20110520130456/http://www.spl.gouv.qc.ca/documentation/loisreglementspolitiques/puftic/[copy]
+|===
 
 == Document history
-
-Add one row for each version that changes this page.
 
 [cols="1,1,4",options="header"]
 |===
 |Version |Date |Change
-|0.1.0 |2026-11-03 |First version.
+|0.1.0 |2026-11-04 |First version.
 |===

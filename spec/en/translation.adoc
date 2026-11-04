@@ -1,0 +1,65 @@
+= Translation
+include::_fpsot-terms.adoc[]
+
+These rules cover the two languages of {abbr-fpsot-first} products and the files that carry translations.
+
+== English and French
+
+[[LOC-030]]
+*LOC-030.* In an {abbr-fpsot} product, every text that people see MUST exist in English and French before a release.
+The release checks MUST fail when a message lacks either language.
+Both versions MUST reach the same quality.
+Federal institutions in Canada publish web content in both official languages, at the same time and with equal quality.
+A release gate keeps one language from falling behind the other.
+
+[[LOC-031]]
+*LOC-031.* Machine translation MAY produce a first draft of a message, as writing rule WRT-033 allows.
+A product MUST mark each machine draft as not yet reviewed in its translation file.
+A person MUST review the draft and remove that mark before the release.
+The release checks MUST fail while a marked entry remains in English or French.
+Machine translation misses terms, register and context.
+The mark shows the reviewer which entries still need a person.
+
+== Translation files
+
+[[LOC-032]]
+*LOC-032.* A product MUST keep its interface messages in one source catalogue per language, in the format of its platform.
+It MUST exchange those messages with translation services and translation tools as {abbr-xliff-first} 2.1 files.
+A platform format, such as the message bundles of a Java framework, is what the program reads.
+Professional translation tools read {abbr-xliff} 2.1, the approved standard.
+The format keeps the source, the translation and the state of each segment together.
+
+[[LOC-033]]
+*LOC-033.* A project SHOULD translate long text, such as documentation and web pages, through {abbr-po-first} files of GNU gettext.
+Each paragraph SHOULD be one entry.
+A product that uses gettext in its code MAY keep its interface messages in {abbr-po} files too.
+A message that uses MessageFormat plurals MUST NOT also use the plural forms of gettext.
+Many open translation platforms can read these plain text files.
+Two plural systems in one message would give translators two sets of rules.
+
+[[LOC-034]]
+*LOC-034.* New work MUST NOT use {abbr-xliff} 1.2.
+A project MAY move to {abbr-xliff} 2.2 once it becomes an approved standard.
+Versions 2.0 and later of {abbr-xliff} changed the file structure, so tools must read the version they get.
+In November 2026, version 2.2 is a committee specification, one step before an approved standard.
+
+[[LOC-035]]
+*LOC-035.* Translation files MUST use {abbr-utf-8-first} and MUST stay under version control, next to the source they translate.
+Each file name MUST carry the language tag of its language, in the form that the platform needs.
+Reviewers then see each change of a translation in a pull request.
+The tag in the name lets tools find each language without a separate list.
+
+[[LOC-036]]
+*LOC-036.* A file MUST record the state of each entry.
+In {abbr-po} files, the `fuzzy` flag marks an entry that needs review.
+In {abbr-xliff} 2.1 files, the `state` attribute of each segment holds `initial`, `translated`, `reviewed` or `final`.
+The release checks of rules LOC-030 and LOC-031 read this state.
+A state kept in the file travels with the translation to any tool.
+
+== Document history
+
+[cols="1,1,4",options="header"]
+|===
+|Version |Date |Change
+|0.1.0 |2026-11-04 |First version.
+|===

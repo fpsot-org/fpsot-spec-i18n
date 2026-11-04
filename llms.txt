@@ -1,0 +1,23 @@
+# FPSOT internationalization specification
+
+> How FPSOT products show text, dates and numbers in English, French and any other locale: language tags, negotiation and fallback, CLDR formatting, MessageFormat messages, translation files, text direction, names and addresses.
+
+## Specification
+
+- [Overview](spec/en/index.adoc): scope, parts, conformance and sources.
+- [Language tags and locales](spec/en/language-tags.adoc): LOC-001 to LOC-007.
+- [Formatting](spec/en/formatting.adoc): LOC-010 to LOC-015.
+- [Messages](spec/en/messages.adoc): LOC-020 to LOC-025.
+- [Translation](spec/en/translation.adoc): LOC-030 to LOC-036.
+- [Text, markup and direction](spec/en/markup.adoc): LOC-040 to LOC-046.
+- [Names and addresses](spec/en/names-addresses.adoc): LOC-050 to LOC-055.
+
+## Guide
+
+- [Make a product ready in English and French](docs/modules/en/pages/index.adoc)
+
+## Optional
+
+- [Agent skill](skill/SKILL.md)
+- [Comparison data](jurisdictions/baseline.yaml)
+- [Français](spec/fr/index.adoc)

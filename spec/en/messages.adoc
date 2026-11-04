@@ -1,0 +1,58 @@
+= Messages
+include::_fpsot-terms.adoc[]
+
+These rules cover the text that people read, such as a label, an error message or an email.
+The {abbr-fpsot-first} writing specification sets how to write that text.
+This page sets how a product stores and builds it, so that translators can work on it.
+
+== Strings outside the code
+
+[[LOC-020]]
+*LOC-020.* A product MUST keep every text that a person can see in message catalogues, outside the program code.
+This covers labels, emails, generated documents, image text alternatives and unit names.
+Each message MUST have a stable identifier.
+Translators can then work without changing code.
+A text inside the code escapes every translation check.
+
+[[LOC-021]]
+*LOC-021.* A product MUST NOT build a sentence by joining fragments of messages.
+Each sentence MUST be one message, with named placeholders for the values.
+Word order differs between languages.
+A sentence made of English fragments cannot become correct French.
+
+== Message syntax
+
+[[LOC-022]]
+*LOC-022.* Messages MUST use the MessageFormat syntax that {abbr-icu-first} defines, through {abbr-icu} or another library that reads the same syntax.
+A product MAY use Unicode MessageFormat 2 instead, where its library supports that syntax in a stable {abbr-api-first}.
+MessageFormat is the shared syntax for placeholders, plurals and choices.
+The MessageFormat 2 syntax is stable in the {abbr-cldr-first} 49 specification.
+Part of its {abbr-api} in {abbr-icu} 79 is still a technology preview.
+
+[[LOC-023]]
+*LOC-023.* A message that includes a number MUST select its words with plural categories, such as `one` and `other`.
+The categories MUST come from the plural rules of the {abbr-cldr}.
+Program code MUST NOT test for the value 1 to choose a plural.
+French puts 0 and 1 in the same category, and English does not.
+Other languages have up to six categories.
+
+[[LOC-024]]
+*LOC-024.* A message SHOULD use wording that fits a person of any gender.
+A message MAY choose a gendered form only from a value that the person gave for that purpose.
+A product MUST NOT infer a gender from a name, a title or a photo.
+Neutral wording works for every reader without any data.
+A wrong guess offends the person and breaks the trust in a public service.
+
+[[LOC-025]]
+*LOC-025.* Each message MUST carry a note for translators that gives its context and the meaning of each placeholder.
+Two messages with the same English text and different meanings MUST have two identifiers.
+In English, "Open" can be a verb on a button or a status in a list.
+French needs two different words for those two uses.
+
+== Document history
+
+[cols="1,1,4",options="header"]
+|===
+|Version |Date |Change
+|0.1.0 |2026-11-04 |First version.
+|===

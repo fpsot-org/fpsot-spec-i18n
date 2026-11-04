@@ -1,0 +1,61 @@
+= Mise en forme
+include::_fpsot-terms.adoc[]
+
+Ces règles portent sur la façon dont un produit montre une date, un nombre ou un montant à une personne.
+Elles visent l’affichage seulement.
+Les programmes échangent des valeurs indépendantes de tout {term-locale}, comme les dates et heures du {abbr-rfc-first} 3339.
+
+== Données régionales
+
+[[LOC-010]]
+*LOC-010.* Un produit DOIT mettre en forme le texte affiché avec les données du {abbr-cldr-first}.
+Cela vise les dates et les heures, les nombres et les pourcentages, les montants, les unités et les listes.
+Il DOIT employer une bibliothèque qui lit ces données, comme {abbr-icu-first} ou celles de la plateforme.
+Un produit NE DOIT PAS écrire ses propres modèles de date ou de nombre pour un paramètre régional.
+Le même montant s’écrit `$1,234.56` en `en-CA` et `1 234,56 $` en `fr-CA`.
+Les modèles écrits à la main se trompent sur ces détails et s’éloignent des données communes.
+
+[[LOC-011]]
+*LOC-011.* Un produit DEVRAIT employer le {abbr-cldr} 49 ou une version plus récente.
+Il DOIT indiquer sa version du {abbr-cldr} dans ses notes de version.
+Les tests DEVRAIENT comparer le texte mis en forme avec la sortie de la bibliothèque, pas avec des chaînes tapées.
+Chaque version du {abbr-cldr} corrige et modifie certains formats, comme les espaces à l’intérieur des nombres.
+Une version indiquée permet d’expliquer un changement dans la sortie.
+
+== Dates, heures et montants
+
+[[LOC-012]]
+*LOC-012.* Un produit DOIT montrer une date et une heure dans le fuseau horaire qu’attend la personne.
+C’est son propre fuseau, ou celui du lieu dont parle la valeur.
+Il DOIT nommer ce fuseau selon la base des fuseaux horaires de l’{abbr-iana-first}, comme `America/Toronto`.
+Il DEVRAIT montrer le fuseau à côté de l’heure quand des lectrices et des lecteurs vivent dans d’autres fuseaux.
+Un décalage seul ne suit pas l’heure avancée.
+Une échéance montrée sans son fuseau induit en erreur une personne d’une autre province.
+
+[[LOC-013]]
+*LOC-013.* Un produit DOIT prendre la devise d’un montant dans les données, jamais dans le paramètre régional de la personne.
+Une personne en `fr-CA` qui consulte un montant en dollars américains voit `1 234,56 $ US`.
+Un paramètre régional fixe la façon d’écrire un montant, pas sa devise.
+
+[[LOC-014]]
+*LOC-014.* Un produit NE DOIT PAS relire un texte mis en forme comme s’il s’agissait de données.
+Un champ de date ou de nombre DOIT convertir la saisie en une valeur indépendante du paramètre régional.
+Il le fait avant d’enregistrer ou d’envoyer cette valeur.
+La virgule marque les décimales en français et sépare les milliers en anglais.
+Un texte mis en forme pour une personne aurait un autre sens pour un autre programme.
+
+== Tri
+
+[[LOC-015]]
+*LOC-015.* Un produit DOIT trier le texte affiché selon les règles de tri du {abbr-cldr} propres à chaque personne.
+Il NE DOIT PAS trier ce texte par point de code ou par octet.
+En français, un mot qui commence par `é` se range avec les mots en `e`, et non après `z`.
+Les personnes s’attendent à l’ordre de leur propre dictionnaire.
+
+== Historique du document
+
+[cols="1,1,4",options="header"]
+|===
+|Version |Date |Changement
+|0.1.0 |2026-11-04 |Première version.
+|===

@@ -1,6 +1,6 @@
 publiccodeYmlVersion: "0.4"
-name: FPSOT specification template
-url: "https://github.com/fpsot-org/fpsot-spec-template"
+name: FPSOT internationalization specification
+url: "https://github.com/fpsot-org/fpsot-spec-i18n"
 platforms:
   - web
 categories:
@@ -9,22 +9,29 @@ developmentStatus: concept
 softwareType: "standalone/other"
 description:
   en:
-    shortDescription: Template for FPSOT specification repositories.
+    shortDescription: Internationalization rules for FPSOT products.
     longDescription: >
-      Starting point for an FPSOT specification repository. It holds the
-      layout, the Community Specification License files, and the CI that
-      checks requirement IDs, links, languages and prose.
+      Rules for language tags, locale negotiation and fallback, formatting
+      with Unicode CLDR data, MessageFormat messages, translation files,
+      text direction, and personal names and postal addresses, so that
+      every FPSOT product works in English, French and any other locale.
     features:
-      - Specification repository layout
+      - English and French in every product
+      - CLDR formatting and MessageFormat plurals
+      - XLIFF 2.1 and PO translation files
   fr:
-    shortDescription: Gabarit des dépôts de spécification de FPSOT.
+    shortDescription: Règles d'internationalisation des produits FPSOT.
     longDescription: >
-      Point de départ d'un dépôt de spécification de FPSOT. Il contient la
-      structure, les fichiers de la Community Specification License, et
-      l'intégration continue qui vérifie les identifiants, les liens, les
-      langues et la rédaction.
+      Règles sur les étiquettes de langue, la négociation et le repli des
+      paramètres régionaux, la mise en forme avec les données du CLDR
+      d'Unicode, les messages MessageFormat, les fichiers de traduction,
+      le sens d'écriture, ainsi que les noms de personnes et les adresses
+      postales, pour que chaque produit FPSOT fonctionne en anglais, en
+      français et dans tout autre paramètre régional.
     features:
-      - Structure d'un dépôt de spécification
+      - Anglais et français dans chaque produit
+      - Mise en forme du CLDR et pluriels MessageFormat
+      - Fichiers de traduction XLIFF 2.1 et PO
 legal:
   license: Community-Spec-1.0
 maintenance:

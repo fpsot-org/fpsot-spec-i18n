@@ -1,30 +1,21 @@
-= FPSOT specification template
+= FPSOT internationalization specification
 
-This repository is the starting point for an FPSOT specification.
-Create a new repository from it, then replace this text.
-
-== Start a specification
-
-. Set `SPEC_PREFIX` in `.github/workflows/ci.yml` to the three-letter prefix of the requirement IDs.
-. Replace the titles in `spec/`, `docs/antora.yml`, `publiccode.yml`, `AGENTS.md`, `NOTICE` and `skill/SKILL.md`.
-. Replace the example requirement TPL-001 and the example row in `jurisdictions/baseline.yaml`.
-. List each spec page in `spec/<lang>/book.adoc`. The glossary stays the last include.
-
-Each page ends with a document history.
-Each guide page sets `:page-type:` to tutorial, how-to, reference or explanation.
-Write abbreviations and defined terms as `{abbr-…}` and `{term-…}` from the term base of `fpsot-spec-writing`.
-The continuous integration writes `_fpsot-terms.adoc`, the glossaries and the comparison pages. Git ignores them.
+Rules for showing text, dates and numbers in the language of each person in FPSOT products: language tags, locale negotiation and fallback, CLDR formatting, MessageFormat messages, translation files, text direction, and personal names and postal addresses.
+Every FPSOT product ships in Canadian English and Canadian French.
+Version 0.1 is a draft.
 
 == Implement this spec
 
 Read the normative text in `spec/en/` or `spec/fr/`.
-Each requirement has an ID, such as `XYZ-001`.
-Check your implementation against every requirement.
+Start with `index.adoc`, then read the six parts.
+Each requirement has an ID from `LOC-001` to `LOC-055`.
+Check your product against every MUST rule.
 
 == Adopt this spec
 
-Read the guides in `docs/modules/en/pages/` or `docs/modules/fr/pages/`.
-They explain what the spec gives your organisation and how to require it.
+Read the guide in `docs/modules/en/pages/index.adoc` or `docs/modules/fr/pages/index.adoc`.
+It shows the main steps for a product in English and French.
+The comparison pages show how the rules of Canada and Québec relate to each requirement.
 
 == Layout
 
@@ -42,13 +33,13 @@ They explain what the spec gives your organisation and how to require it.
 | The agent skill: a short summary that cites requirement IDs.
 
 | `rules/`
-| Machine-checkable rules.
+| Machine-checkable rules. None yet.
 
 | `diagrams/`
-| PlantUML sources and their rendered SVG files.
+| PlantUML sources and their rendered SVG files. None yet.
 
 | `jurisdictions/`
-| Comparison data per jurisdiction. `baseline.yaml` lists the compared requirements.
+| Comparison data: the international baseline, Canada and Québec.
 |===
 
 == Licence

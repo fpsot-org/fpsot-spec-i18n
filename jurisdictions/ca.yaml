@@ -1,0 +1,28 @@
+code: CA
+name: {en: Canada, fr: Canada}
+rows:
+  - id: LOC-007
+    text: {en: "When an institution uses both official languages, French comes first for an office in Quebec and English first elsewhere in Canada.", fr: "Quand une institution emploie les deux langues officielles, le français vient en premier pour un bureau au Québec, et l’anglais ailleurs au Canada."}
+    status: same
+    source: {title: "Treasury Board of Canada Secretariat, Directive on Official Languages for Communications and Services, section 6.1.1", version: "In effect since 2012-11-19", date: "2012-10-15", url: "https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164", archive: "https://web.archive.org/web/20260212070345/https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164"}
+    last_checked: "2026-11-04"
+  - id: LOC-030
+    text: {en: "Web pages that must be in both official languages have content that is available at the same time and of equal quality in each. Interface components meet the same obligations.", fr: "Les pages Web qui doivent être dans les deux langues officielles offrent un contenu disponible en même temps et de qualité égale dans chacune. Les composants d’interface respectent les mêmes obligations."}
+    status: same
+    source: {title: "Treasury Board of Canada Secretariat, Directive on Official Languages for Communications and Services, sections 6.6.4.1 and 6.6.4.2", version: "In effect since 2012-11-19", date: "2012-10-15", url: "https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164", archive: "https://web.archive.org/web/20260212070345/https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164"}
+    last_checked: "2026-11-04"
+  - id: LOC-041
+    text: {en: "People can select either official language for pages that must be in both. The directive does not say how to label the choice.", fr: "Les personnes peuvent choisir l’une ou l’autre langue officielle pour les pages qui doivent être dans les deux. La directive ne dit pas comment nommer ce choix."}
+    status: looser
+    source: {title: "Treasury Board of Canada Secretariat, Directive on Official Languages for Communications and Services, section 6.6.3.4", version: "In effect since 2012-11-19", date: "2012-10-15", url: "https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164", archive: "https://web.archive.org/web/20260212070345/https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164"}
+    last_checked: "2026-11-04"
+  - id: LOC-042
+    text: {en: "The character encoding of each web page supports diacritics, and correct diacritics count toward the quality of both languages. No encoding is named.", fr: "Le codage des caractères de chaque page Web prend en charge les signes diacritiques, et leur emploi correct compte dans la qualité des deux langues. Aucun codage n’est nommé."}
+    status: looser
+    source: {title: "Treasury Board of Canada Secretariat, Directive on Official Languages for Communications and Services, section 6.6.3.6", version: "In effect since 2012-11-19", date: "2012-10-15", url: "https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164", archive: "https://web.archive.org/web/20260212070345/https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164"}
+    last_checked: "2026-11-04"
+  - id: LOC-054
+    text: {en: "The postal code is in capitals, in the form A1A 1A1, two spaces after the province or territory code. Municipality and street names are not translated.", fr: "Le code postal est en majuscules, sous la forme A1A 1A1, deux espaces après le code de la province ou du territoire. Les noms de municipalités et de rues ne sont pas traduits."}
+    status: same
+    source: {title: "Canada Post, Addressing guidelines: Civic address", url: "https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page", archive: "https://web.archive.org/web/20260709050719/https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page"}
+    last_checked: "2026-11-04"
