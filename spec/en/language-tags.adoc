@@ -7,8 +7,8 @@ A {term-locale} is a language together with the conventions of a region, such as
 == Language tags
 
 [[LOC-001]]
-*LOC-001.* A product MUST identify every language and locale with a language tag that follows {abbr-bcp-first} 47.
-Each tag MUST be valid against the language subtag registry of the {abbr-iana-first}.
+*LOC-001.* A product MUST identify every language and locale with a language tag that follows link:https://www.rfc-editor.org/info/rfc5646[BCP 47].
+Each tag MUST be valid against the link:https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry[language subtag registry] of the {abbr-iana-first}.
 A product MUST write tags in the usual case, such as `fr-CA` or `zh-Hant-TW`.
 The language is in lower case, the script in title case and the region in upper case.
 One tag syntax then works in pages, in {abbr-api-first} calls, in translation files and in libraries.
@@ -20,13 +20,13 @@ Write `fr` or `fr-CA`, not `fr-Latn-CA`.
 A product MUST NOT send platform forms such as `fr_CA` in data that leaves the program.
 It converts them at the edge of the library that needs them.
 Extra subtags add nothing and make matching fail.
-The underscore form belongs to some platforms, not to {abbr-bcp} 47.
+The underscore form belongs to some platforms, not to {abbr-bcp-first} 47.
 
 == Supported locales
 
 [[LOC-003]]
 *LOC-003.* Every {abbr-fpsot-first} product MUST support the `en-CA` and `fr-CA` locales.
-It MAY support any other locale that has data in the {abbr-cldr-first}.
+It MAY support any other locale that has link:https://cldr.unicode.org/downloads/cldr-49[data] in the {abbr-cldr-first}.
 Contributors add other variants, such as `en-GB` or `en-US`, with their translations.
 {abbr-fpsot} serves Canadian public bodies first.
 The {abbr-cldr} holds the formats of hundreds of locales, so no new locale needs new code.
@@ -55,10 +55,10 @@ A browser setting is often a default that the person never chose.
 A location says nothing about the language that a person reads.
 
 [[LOC-006]]
-*LOC-006.* A product MUST look up each message through a fallback chain built with the lookup scheme of {abbr-rfc-first} 4647.
+*LOC-006.* A product MUST look up each message through a fallback chain built with the lookup scheme of link:https://www.rfc-editor.org/info/rfc4647[RFC 4647].
 The chain removes subtags from the end, then ends with the default locale.
 For example, `fr-CA` falls back to `fr`, then to the default locale.
-Libraries that follow the parent locales of the {abbr-cldr}, such as `en-CA` to `en-001` to `en`, meet this rule.
+Libraries that follow the link:https://www.unicode.org/reports/tr35/[parent locales] of the {abbr-cldr}, such as `en-CA` to `en-001` to `en`, meet this rule.
 A product MUST NOT show a message key or an empty string to a person.
 A message in a near language helps the reader more than a technical key.
 
@@ -68,10 +68,21 @@ The default order MUST put French first for a deployment in Québec, and English
 The federal rule on the order of official languages works the same way.
 A fixed order per deployment keeps every screen consistent.
 
+== References
+
+=== Normative
+
+* link:https://www.rfc-editor.org/info/rfc5646[RFC 5646, Tags for Identifying Languages], IETF, BCP 47, 2009-09. link:https://web.archive.org/web/20261027004131/https://www.rfc-editor.org/info/rfc5646/[Archived copy]
+* link:https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry[Language Subtag Registry], IANA.
+* link:https://cldr.unicode.org/downloads/cldr-49[Unicode CLDR 49 release], Unicode Consortium, 49, 2026-10-22. link:https://web.archive.org/web/20261027022544/https://cldr.unicode.org/downloads/cldr-49[Archived copy]
+* link:https://www.rfc-editor.org/info/rfc4647[RFC 4647, Matching of Language Tags], IETF, BCP 47, 2006-09. link:https://web.archive.org/web/20261027030853/https://www.rfc-editor.org/info/rfc4647/[Archived copy]
+* link:https://www.unicode.org/reports/tr35/[UTS #35, Unicode Locale Data Markup Language, Part 1: Core], Unicode Consortium.
+
 == Document history
 
 [cols="1,1,4",options="header"]
 |===
 |Version |Date |Change
 |0.1.0 |2026-11-04 |First version.
+|0.1.1 |2026-11-04 |Linked outside standards and added references.
 |===

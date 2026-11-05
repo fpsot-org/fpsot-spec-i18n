@@ -42,7 +42,7 @@ The comparison pages show how the rules of Canada and Québec relate to each req
 | Comparison data: the international baseline, Canada and Québec.
 |===
 
-== Licence
+== License
 
 The specification is under the Community Specification License 1.0.
 Source code is under the Apache License 2.0.

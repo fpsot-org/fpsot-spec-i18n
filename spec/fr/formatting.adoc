@@ -3,12 +3,12 @@ include::_fpsot-terms.adoc[]
 
 Ces règles portent sur la façon dont un produit montre une date, un nombre ou un montant à une personne.
 Elles visent l’affichage seulement.
-Les programmes échangent des valeurs indépendantes de tout {term-locale}, comme les dates et heures du {abbr-rfc-first} 3339.
+Les programmes échangent des valeurs indépendantes de tout {term-locale}, comme les dates et heures du link:https://www.rfc-editor.org/info/rfc3339[RFC 3339].
 
 == Données régionales
 
 [[LOC-010]]
-*LOC-010.* Un produit DOIT mettre en forme le texte affiché avec les données du {abbr-cldr-first}.
+*LOC-010.* Un produit DOIT mettre en forme le texte affiché avec les link:https://cldr.unicode.org/downloads/cldr-49[données] du {abbr-cldr-first}.
 Cela vise les dates et les heures, les nombres et les pourcentages, les montants, les unités et les listes.
 Il DOIT employer une bibliothèque qui lit ces données, comme {abbr-icu-first} ou celles de la plateforme.
 Un produit NE DOIT PAS écrire ses propres modèles de date ou de nombre pour un paramètre régional.
@@ -26,9 +26,9 @@ Une version indiquée permet d’expliquer un changement dans la sortie.
 
 [[LOC-012]]
 *LOC-012.* Un produit DOIT montrer une date et une heure dans le fuseau de la personne ou du lieu visé.
-Il DOIT désigner ce fuseau par son nom dans la base des fuseaux horaires de l’{abbr-iana-first}, comme `America/Toronto`.
+Il DOIT désigner ce fuseau par son nom dans la link:https://www.iana.org/time-zones[base des fuseaux horaires] de l’{abbr-iana-first}, comme `America/Toronto`.
 Il DEVRAIT montrer le fuseau à côté de l’heure quand le lectorat peut vivre dans d’autres fuseaux.
-Un fuseau montré aux personnes DOIT porter le nom localisé du {abbr-cldr}, comme « heure de l’Est ».
+Un fuseau montré aux personnes DOIT porter le link:https://cldr.unicode.org/downloads/cldr-49[nom localisé] du {abbr-cldr}, comme « heure de l’Est ».
 Un décalage seul ne suit pas l’heure avancée, et peu de personnes comprennent un nom de la base.
 Une échéance montrée sans son fuseau induit en erreur une personne d’une autre province.
 
@@ -47,10 +47,21 @@ Un texte mis en forme pour une personne aurait un autre sens pour un autre progr
 == Tri
 
 [[LOC-015]]
-*LOC-015.* Un produit DOIT trier le texte destiné aux personnes selon le tri du {abbr-cldr} de leur paramètre régional.
+*LOC-015.* Un produit DOIT trier le texte destiné aux personnes selon le link:https://cldr.unicode.org/downloads/cldr-49[tri] du {abbr-cldr} de leur paramètre régional.
 Il NE DOIT PAS trier ce texte par point de code ou par octet.
 En français, un mot qui commence par `é` se range avec les mots en `e`, et non après `z`.
 Les personnes s’attendent à l’ordre de leur propre dictionnaire.
+
+== Références
+
+=== Références normatives
+
+* link:https://cldr.unicode.org/downloads/cldr-49[Unicode CLDR 49, notes de version], Consortium Unicode, 49, 2026-10-22. link:https://web.archive.org/web/20261027022544/https://cldr.unicode.org/downloads/cldr-49[Copie archivée]
+* link:https://www.iana.org/time-zones[Time Zone Database], IANA, 2026f, 2026-10-27. link:https://web.archive.org/web/20261102142415/https://www.iana.org/time-zones[Copie archivée]
+
+=== Références informatives
+
+* link:https://www.rfc-editor.org/info/rfc3339[RFC 3339, Date and Time on the Internet: Timestamps], IETF, 2002-07. link:https://web.archive.org/web/20261022094524/https://www.rfc-editor.org/info/rfc3339/[Copie archivée]
 
 == Historique du document
 
@@ -58,4 +69,5 @@ Les personnes s’attendent à l’ordre de leur propre dictionnaire.
 |===
 |Version |Date |Changement
 |0.1.0 |2026-11-04 |Première version.
+|0.1.1 |2026-11-04 |Liens vers les normes externes et références ajoutées.
 |===

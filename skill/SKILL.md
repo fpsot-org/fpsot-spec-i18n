@@ -36,7 +36,7 @@ The spec text in `spec/` wins on any difference. Each line cites its requirement
 
 - Every user-visible text must exist in English and French before a release (LOC-030).
 - Machine translation may make a draft only. It must be marked, and the release must block until a person reviews it (LOC-031, WRT-033).
-- Interface messages must be in the platform catalogue and must be exchanged as XLIFF 2.1 (LOC-032). Long text should use gettext PO, one entry per paragraph (LOC-033).
+- Interface messages must be in the platform catalog and must be exchanged as XLIFF 2.1 (LOC-032). Long text should use gettext PO, one entry per paragraph (LOC-033).
 - New work must not use XLIFF 1.2. Projects may move to XLIFF 2.2 once it is an approved standard (LOC-034).
 - Translation files must be UTF-8, under version control, named with the language tag (LOC-035), and must record the state of each entry (LOC-036).
 

@@ -4,7 +4,7 @@
 
 ## Specification
 
-- [Overview](spec/en/index.adoc): scope, parts, conformance and sources.
+- [Overview](spec/en/index.adoc): scope, parts, conformance and references.
 - [Language tags and locales](spec/en/language-tags.adoc): LOC-001 to LOC-007.
 - [Formatting](spec/en/formatting.adoc): LOC-010 to LOC-015.
 - [Messages](spec/en/messages.adoc): LOC-020 to LOC-025.
