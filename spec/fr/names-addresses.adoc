@@ -54,8 +54,8 @@ Les noms de lieux officiels n’ont qu’une forme, et un nom traduit peut envoy
 
 === Références normatives
 
-* link:https://www.unicode.org/standard/standard.html[The Unicode Standard], Consortium Unicode.
-* link:https://www.iso.org/iso-3166-country-codes.html[ISO 3166 Country Codes], ISO.
+* link:https://www.unicode.org/standard/standard.html[The Unicode Standard], Consortium Unicode. link:https://web.archive.org/web/20261027024856/http://unicode.org/standard/standard.html[Copie archivée]
+* link:https://www.iso.org/iso-3166-country-codes.html[ISO 3166 Country Codes], ISO. link:https://web.archive.org/web/20261027022740/https://www.iso.org/iso-3166-country-codes.html[Copie archivée]
 * link:https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Addressing guidelines: Civic address], Postes Canada. link:https://web.archive.org/web/20260709050719/https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Copie archivée]
 
 == Historique du document

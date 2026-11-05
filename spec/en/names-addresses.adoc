@@ -54,8 +54,8 @@ Official place names have one form, and a translated name can send mail to the w
 
 === Normative
 
-* link:https://www.unicode.org/standard/standard.html[The Unicode Standard], Unicode Consortium.
-* link:https://www.iso.org/iso-3166-country-codes.html[ISO 3166 Country Codes], ISO.
+* link:https://www.unicode.org/standard/standard.html[The Unicode Standard], Unicode Consortium. link:https://web.archive.org/web/20261027024856/http://unicode.org/standard/standard.html[Archived copy]
+* link:https://www.iso.org/iso-3166-country-codes.html[ISO 3166 Country Codes], ISO. link:https://web.archive.org/web/20261027022740/https://www.iso.org/iso-3166-country-codes.html[Archived copy]
 * link:https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Addressing guidelines: Civic address], Canada Post. link:https://web.archive.org/web/20260709050719/https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Archived copy]
 
 == Document history

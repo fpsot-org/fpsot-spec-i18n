@@ -43,17 +43,17 @@ Each entry gives the version and date that the publisher states, and an archived
 * link:https://www.rfc-editor.org/info/rfc8174[RFC 8174, Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words], IETF, BCP 14, 2017-05. link:https://web.archive.org/web/20261103005743/https://www.rfc-editor.org/info/rfc8174/[Archived copy]
 * link:https://www.rfc-editor.org/info/rfc5646[RFC 5646, Tags for Identifying Languages], IETF, BCP 47, 2009-09. link:https://web.archive.org/web/20261027004131/https://www.rfc-editor.org/info/rfc5646/[Archived copy]
 * link:https://www.rfc-editor.org/info/rfc4647[RFC 4647, Matching of Language Tags], IETF, BCP 47, 2006-09. link:https://web.archive.org/web/20261027030853/https://www.rfc-editor.org/info/rfc4647/[Archived copy]
-* link:https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry[Language Subtag Registry], IANA.
-* link:https://www.unicode.org/reports/tr35/[UTS #35, Unicode Locale Data Markup Language, Part 1: Core], Unicode Consortium.
+* link:https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry[Language Subtag Registry], IANA. link:https://web.archive.org/web/20261021200527/http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry[Archived copy]
+* link:https://www.unicode.org/reports/tr35/[UTS #35, Unicode Locale Data Markup Language, Part 1: Core], Unicode Consortium. link:https://web.archive.org/web/20261027022456/https://www.unicode.org/reports/tr35/[Archived copy]
 * link:https://cldr.unicode.org/downloads/cldr-49[Unicode CLDR 49 release], Unicode Consortium, 49, 2026-10-22. link:https://web.archive.org/web/20261027022544/https://cldr.unicode.org/downloads/cldr-49[Archived copy]
 * link:https://www.iana.org/time-zones[Time Zone Database], IANA, 2026f, 2026-10-27. link:https://web.archive.org/web/20261102142415/https://www.iana.org/time-zones[Archived copy]
 * link:https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html[UTS #35, Part 9: MessageFormat], Unicode Consortium, CLDR 49, revision 79, 2026-10-21. link:https://web.archive.org/web/20261027022518/https://www.unicode.org/reports/tr35/tr35-messageFormat.html[Archived copy]
 * link:https://unicode-org.github.io/icu/userguide/format_parse/messages/[ICU User Guide, Formatting Messages], Unicode Consortium. link:https://web.archive.org/web/20261022130913/https://unicode-org.github.io/icu/userguide/format_parse/messages/[Archived copy]
 * link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[XLIFF Version 2.1, OASIS Standard], OASIS, 2.1, 2018-02-13. link:https://web.archive.org/web/20260702061048/https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[Archived copy]
 * link:https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html[GNU gettext manual, The Format of PO Files], GNU Project, 1.0. link:https://web.archive.org/web/20261018135650/https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html[Archived copy]
-* link:https://www.unicode.org/standard/standard.html[The Unicode Standard], Unicode Consortium.
+* link:https://www.unicode.org/standard/standard.html[The Unicode Standard], Unicode Consortium. link:https://web.archive.org/web/20261027024856/http://unicode.org/standard/standard.html[Archived copy]
 * link:https://www.unicode.org/reports/tr15/[UAX #15, Unicode Normalization Forms], Unicode Consortium, revision 58, Unicode 18.0.0, 2026-08-12. link:https://web.archive.org/web/20261101003952/https://www.unicode.org/reports/tr15/[Archived copy]
-* link:https://www.iso.org/iso-3166-country-codes.html[ISO 3166 Country Codes], ISO.
+* link:https://www.iso.org/iso-3166-country-codes.html[ISO 3166 Country Codes], ISO. link:https://web.archive.org/web/20261027022740/https://www.iso.org/iso-3166-country-codes.html[Archived copy]
 * link:https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Addressing guidelines: Civic address], Canada Post. link:https://web.archive.org/web/20260709050719/https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Archived copy]
 
 === Informative
