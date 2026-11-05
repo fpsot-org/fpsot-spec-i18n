@@ -6,6 +6,12 @@ and versions follow [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.h
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-11-05
+
+### Fixed
+
+- The Québec policy on French in information technology now has a current archived copy of its quebec.ca page, instead of a 2011 copy of an older page.
+
 ## [0.1.1] - 2026-11-04
 
 ### Changed
