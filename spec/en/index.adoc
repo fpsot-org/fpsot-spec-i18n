@@ -69,7 +69,7 @@ Each entry gives the version and date that the publisher states, and an archived
 * link:https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164[Directive on Official Languages for Communications and Services], Treasury Board of Canada Secretariat, in effect since 2012-11-19, 2012-10-15. link:https://web.archive.org/web/20260212070345/https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=26164[Archived copy]
 * link:https://www.upu.int/UPU/media/upu/PostalEntitiesFiles/addressingUnit/canEn.pdf[Postal addressing systems: Canada], Universal Postal Union, 2014-09. link:https://web.archive.org/web/20260606074343/https://www.upu.int/UPU/media/upu/PostalEntitiesFiles/addressingUnit/CANEn.pdf[Archived copy]
 * link:https://design.quebec.ca/contenu/orientations-generales/langue-traduction[Langue et traduction], Système de design gouvernemental, 2026-10-13. link:https://web.archive.org/web/20250804161651/https://design.quebec.ca/contenu/orientations-generales/langue-traduction[Archived copy]
-* link:https://www.quebec.ca/gouvernement/ministeres-organismes/langue-francaise/publications/politique-utilisation-francais-tic[Politique d'utilisation du français dans les technologies de l'information et des communications], Gouvernement du Québec, adopted 2006-12, 2026-07-16. link:https://web.archive.org/web/20110520130456/http://www.spl.gouv.qc.ca/documentation/loisreglementspolitiques/puftic/[Archived copy]
+* link:https://www.quebec.ca/gouvernement/ministeres-organismes/langue-francaise/publications/politique-utilisation-francais-tic[Politique d'utilisation du français dans les technologies de l'information et des communications], Gouvernement du Québec, adopted 2006-12, 2026-07-16. link:https://web.archive.org/web/20261105030606/https://www.quebec.ca/gouvernement/ministeres-organismes/langue-francaise/publications/politique-utilisation-francais-tic[Archived copy]
 
 == Document history
 
@@ -78,4 +78,5 @@ Each entry gives the version and date that the publisher states, and an archived
 |Version |Date |Change
 |0.1.0 |2026-11-04 |First version.
 |0.1.1 |2026-11-04 |Linked outside standards, added references and moved to US spelling.
+|0.1.2 |2026-11-05 |A current archived copy of the Québec policy on French in information technology.
 |===
