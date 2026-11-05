@@ -7,7 +7,7 @@ The examples use a Java message bundle, but the steps work on any platform.
 
 == Move the text out of the code
 
-Put every label and message in one catalogue per language, as rule LOC-020 asks.
+Put every label and message in one catalog per language, as rule LOC-020 asks.
 Give each message a stable key and a note for translators, as LOC-025 asks.
 
 [source,properties]
@@ -25,7 +25,8 @@ In French, 0 and 1 both take the singular, so "0 fichier" is correct.
 
 == Format with locale data
 
-Format each date, number and amount with a library that reads the {abbr-cldr-first}, as LOC-010 asks.
+Format each date, number and amount with a library that reads the link:https://cldr.unicode.org/downloads/cldr-49[data] of the {abbr-cldr-first}.
+Rule LOC-010 asks for this.
 Never write a pattern such as `yyyy/MM/dd` by hand.
 Show the time zone next to a deadline when readers can live in other provinces.
 
@@ -38,7 +39,7 @@ Declare the language on the `html` element, as LOC-040 asks.
 
 == Send the text for translation
 
-Export the catalogue as an {abbr-xliff-first} 2.1 file for the translation team, as LOC-032 asks.
+Export the catalog as an {abbr-xliff-first} file in link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[version 2.1] for the translation team, as LOC-032 asks.
 Machine translation can give a first draft, but each draft keeps the state `initial` until a person reviews it.
 Import the reviewed file, and let the release checks confirm that no entry is still waiting.
 
@@ -58,10 +59,18 @@ Ask for the full name in one field, as LOC-050 asks.
 Store each address in separate fields with its country code.
 Print a Canadian postal code as `A1A 1A1`, and keep street and municipality names as written.
 
+== References
+
+=== Informative
+
+* link:https://cldr.unicode.org/downloads/cldr-49[Unicode CLDR 49 release], Unicode Consortium, 49, 2026-10-22. link:https://web.archive.org/web/20261027022544/https://cldr.unicode.org/downloads/cldr-49[Archived copy]
+* link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[XLIFF Version 2.1, OASIS Standard], OASIS, 2.1, 2018-02-13. link:https://web.archive.org/web/20260702061048/https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[Archived copy]
+
 == Document history
 
 [cols="1,1,4",options="header"]
 |===
 |Version |Date |Change
 |0.1.0 |2026-11-04 |First version.
+|0.1.1 |2026-11-04 |Linked outside standards, added references and moved to US spelling.
 |===

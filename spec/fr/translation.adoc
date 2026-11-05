@@ -24,22 +24,22 @@ La marque montre à la personne qui révise les entrées qui attendent encore un
 
 [[LOC-032]]
 *LOC-032.* Un produit DOIT garder ses messages d’interface dans un catalogue source par langue, au format de sa plateforme.
-Il DOIT échanger ces messages avec les services et les outils de traduction sous forme de fichiers {abbr-xliff-first} 2.1.
+Il DOIT échanger ces messages avec les services et les outils de traduction sous forme de fichiers {abbr-xliff-first} link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[2.1].
 Le programme lit un format de plateforme, comme les paquets de messages d’un cadriciel Java.
 Les outils professionnels de traduction lisent {abbr-xliff} 2.1, la norme approuvée.
 Ce format garde ensemble la source, la traduction et l’état de chaque segment.
 
 [[LOC-033]]
-*LOC-033.* Un projet DEVRAIT traduire les textes longs, comme la documentation, au moyen de fichiers {abbr-po-first} de GNU gettext.
+*LOC-033.* Un projet DEVRAIT traduire les textes longs, comme la documentation, au moyen de fichiers {abbr-po-first} de link:https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html[GNU gettext].
 Chaque paragraphe DEVRAIT former une entrée.
 Un produit qui emploie gettext dans son code PEUT aussi garder ses messages d’interface dans des fichiers {abbr-po}.
-Un message qui emploie les pluriels de MessageFormat NE DOIT PAS employer aussi les formes plurielles de gettext.
+Un message qui emploie les link:https://unicode-org.github.io/icu/userguide/format_parse/messages/[pluriels de MessageFormat] NE DOIT PAS employer aussi les formes plurielles de gettext.
 Bien des plateformes libres de traduction lisent ces fichiers en texte brut.
 Deux systèmes de pluriel dans un même message imposeraient deux jeux de règles.
 
 [[LOC-034]]
 *LOC-034.* Un nouveau travail NE DOIT PAS employer {abbr-xliff} 1.2.
-Un projet PEUT passer à {abbr-xliff} 2.2 dès que cette version devient une norme approuvée.
+Un projet PEUT passer à link:https://docs.oasis-open.org/xliff/xliff-core/v2.2/xliff-core-v2.2-part1.html[XLIFF 2.2] dès que cette version devient une norme approuvée.
 Depuis la version 2.0, {abbr-xliff} a une autre structure de fichier, donc les outils doivent lire la version reçue.
 En novembre 2026, la version 2.2 est une spécification de comité, une étape avant la norme approuvée.
 
@@ -57,10 +57,23 @@ Dans les fichiers {abbr-xliff} 2.1, l’attribut `state` de chaque segment vaut 
 Les vérifications de version des règles LOC-030 et LOC-031 lisent cet état.
 Un état gardé dans le fichier suit la traduction dans tout outil.
 
+== Références
+
+=== Références normatives
+
+* link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[XLIFF Version 2.1, OASIS Standard], OASIS, 2.1, 2018-02-13. link:https://web.archive.org/web/20260702061048/https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[Copie archivée]
+* link:https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html[GNU gettext manual, The Format of PO Files], Projet GNU, 1.0. link:https://web.archive.org/web/20261018135650/https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html[Copie archivée]
+* link:https://unicode-org.github.io/icu/userguide/format_parse/messages/[ICU User Guide, Formatting Messages], Consortium Unicode. link:https://web.archive.org/web/20261022130913/https://unicode-org.github.io/icu/userguide/format_parse/messages/[Copie archivée]
+
+=== Références informatives
+
+* link:https://docs.oasis-open.org/xliff/xliff-core/v2.2/xliff-core-v2.2-part1.html[XLIFF Version 2.2, Part 1: Core, Committee Specification 01], OASIS, 2.2, 2025-03-13. link:https://web.archive.org/web/20260902173033/https://docs.oasis-open.org/xliff/xliff-core/v2.2/xliff-core-v2.2-part1.html[Copie archivée]
+
 == Historique du document
 
 [cols="1,1,4",options="header"]
 |===
 |Version |Date |Changement
 |0.1.0 |2026-11-04 |Première version.
+|0.1.1 |2026-11-04 |Liens vers les normes externes, références ajoutées et orthographe américaine pour l’anglais.
 |===

@@ -6,6 +6,15 @@ and versions follow [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.h
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-04
+
+### Changed
+
+- Each page links the outside standards it names, including the conformance RFCs, and lists them under References.
+- The Sources table of the index page is now its References section, split into normative and informative sources.
+- English text uses US spelling, with Merriam-Webster as the reference.
+- The repository turns on the references and US spelling checks in `.fpsot-checks`.
+
 ## [0.1.0] - 2026-11-04
 
 ### Added

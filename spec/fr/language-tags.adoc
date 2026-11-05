@@ -7,8 +7,8 @@ Un {term-locale} associe une langue aux conventions d’une région, par exemple
 == Étiquettes de langue
 
 [[LOC-001]]
-*LOC-001.* Un produit DOIT désigner chaque langue et chaque paramètre régional par une étiquette de langue conforme au {abbr-bcp-first} 47.
-Chaque étiquette DOIT être valide selon le registre des sous-étiquettes de langue de l’{abbr-iana-first}.
+*LOC-001.* Un produit DOIT désigner chaque langue et chaque paramètre régional par une étiquette de langue conforme au link:https://www.rfc-editor.org/info/rfc5646[BCP 47].
+Chaque étiquette DOIT être valide selon le link:https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry[registre des sous-étiquettes de langue] de l’{abbr-iana-first}.
 Un produit DOIT écrire les étiquettes dans la casse habituelle, par exemple `fr-CA` ou `zh-Hant-TW`.
 La langue est en minuscules, l’écriture a une majuscule initiale et la région est en majuscules.
 Une seule syntaxe fonctionne alors dans les pages, les appels d’{abbr-api-first}, les fichiers de traduction et les bibliothèques.
@@ -20,13 +20,13 @@ Une casse commune évite les surprises lors des comparaisons.
 Un produit NE DOIT PAS envoyer de formes de plateforme, comme `fr_CA`, dans des données qui sortent du programme.
 Il les convertit à la frontière de la bibliothèque qui en a besoin.
 Les sous-étiquettes en trop n’apportent rien et font échouer la correspondance.
-La forme avec un trait de soulignement appartient à certaines plateformes, pas au {abbr-bcp} 47.
+La forme avec un trait de soulignement appartient à certaines plateformes, pas au {abbr-bcp-first} 47.
 
 == Paramètres régionaux pris en charge
 
 [[LOC-003]]
 *LOC-003.* Chaque produit de la {abbr-fpsot-first} DOIT prendre en charge les paramètres régionaux `en-CA` et `fr-CA`.
-Il PEUT prendre en charge tout autre paramètre régional qui a des données dans le {abbr-cldr-first}.
+Il PEUT prendre en charge tout autre paramètre régional qui a des link:https://cldr.unicode.org/downloads/cldr-49[données] dans le {abbr-cldr-first}.
 Les personnes qui contribuent ajoutent les autres variantes, comme `en-GB` ou `en-US`, avec leurs traductions.
 La {abbr-fpsot} sert d’abord les organismes publics canadiens.
 Le {abbr-cldr} contient les formats de centaines de paramètres régionaux, donc un nouveau paramètre ne demande aucun nouveau code.
@@ -55,10 +55,10 @@ Un réglage du navigateur est souvent une valeur par défaut que la personne n�
 Un lieu ne dit rien de la langue que lit une personne.
 
 [[LOC-006]]
-*LOC-006.* Un produit DOIT chercher chaque message dans une chaîne de repli selon la méthode de recherche du {abbr-rfc-first} 4647.
+*LOC-006.* Un produit DOIT chercher chaque message dans une chaîne de repli selon la méthode de recherche du link:https://www.rfc-editor.org/info/rfc4647[RFC 4647].
 La chaîne retire les sous-étiquettes en partant de la fin, puis se termine par le paramètre régional par défaut.
 Par exemple, `fr-CA` se replie sur `fr`, puis sur le paramètre par défaut.
-Les bibliothèques qui suivent les paramètres parents du {abbr-cldr}, comme `en-CA` vers `en-001` puis `en`, respectent cette règle.
+Les bibliothèques qui suivent les link:https://www.unicode.org/reports/tr35/[paramètres parents] du {abbr-cldr}, comme `en-CA` vers `en-001` puis `en`, respectent cette règle.
 Un produit NE DOIT PAS montrer une clé de message ou une chaîne vide à une personne.
 Un message dans une langue proche aide plus qu’une clé technique.
 
@@ -68,10 +68,21 @@ Par défaut, le français DOIT venir en premier au Québec, et l’anglais aille
 La règle fédérale sur l’ordre des langues officielles fonctionne de la même façon.
 Un ordre fixe par déploiement garde tous les écrans cohérents.
 
+== Références
+
+=== Références normatives
+
+* link:https://www.rfc-editor.org/info/rfc5646[RFC 5646, Tags for Identifying Languages], IETF, BCP 47, 2009-09. link:https://web.archive.org/web/20261027004131/https://www.rfc-editor.org/info/rfc5646/[Copie archivée]
+* link:https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry[Language Subtag Registry], IANA. link:https://web.archive.org/web/20261021200527/http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry[Copie archivée]
+* link:https://cldr.unicode.org/downloads/cldr-49[Unicode CLDR 49, notes de version], Consortium Unicode, 49, 2026-10-22. link:https://web.archive.org/web/20261027022544/https://cldr.unicode.org/downloads/cldr-49[Copie archivée]
+* link:https://www.rfc-editor.org/info/rfc4647[RFC 4647, Matching of Language Tags], IETF, BCP 47, 2006-09. link:https://web.archive.org/web/20261027030853/https://www.rfc-editor.org/info/rfc4647/[Copie archivée]
+* link:https://www.unicode.org/reports/tr35/[UTS #35, Unicode Locale Data Markup Language, Part 1: Core], Consortium Unicode. link:https://web.archive.org/web/20261027022456/https://www.unicode.org/reports/tr35/[Copie archivée]
+
 == Historique du document
 
 [cols="1,1,4",options="header"]
 |===
 |Version |Date |Changement
 |0.1.0 |2026-11-04 |Première version.
+|0.1.1 |2026-11-04 |Liens vers les normes externes et références ajoutées.
 |===

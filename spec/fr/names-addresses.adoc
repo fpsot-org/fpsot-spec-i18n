@@ -14,7 +14,7 @@ Bien des personnes n’ont qu’un nom, ont plusieurs noms de famille ou placent
 Un formulaire conçu pour un seul modèle rejette les autres.
 
 [[LOC-051]]
-*LOC-051.* Un champ de nom DOIT accepter toute lettre et tout signe diacritique Unicode.
+*LOC-051.* Un champ de nom DOIT accepter toute lettre et tout signe diacritique link:https://www.unicode.org/standard/standard.html[Unicode].
 Il DOIT aussi accepter les espaces, les traits d’union et les apostrophes.
 Il DOIT accepter un nom d’un seul caractère et DEVRAIT permettre au moins 100 caractères.
 Un produit DOIT conserver et montrer le nom tel que la personne l’a écrit, sans changer la casse.
@@ -29,7 +29,7 @@ Le nom de tous les jours peut différer du nom légal.
 == Adresses postales
 
 [[LOC-053]]
-*LOC-053.* Un produit DOIT conserver une adresse en champs distincts, avec le code de pays {abbr-iso-first} 3166-1 à deux lettres.
+*LOC-053.* Un produit DOIT conserver une adresse en champs distincts, avec le code de pays link:https://www.iso.org/iso-3166-country-codes.html[ISO 3166-1] à deux lettres.
 Il DOIT montrer et imprimer l’adresse selon le format de son pays.
 Les champs DOIVENT convenir au pays.
 Un produit NE DOIT PAS exiger un code postal ou une région là où le pays n’en a pas.
@@ -37,7 +37,7 @@ Chaque pays ordonne et nomme à sa façon les parties d’une adresse.
 Des champs distincts permettent d’imprimer une même adresse pour bien des systèmes postaux.
 
 [[LOC-054]]
-*LOC-054.* Un produit DOIT mettre en forme une adresse canadienne comme le décrivent les lignes directrices d’adressage de Postes Canada.
+*LOC-054.* Un produit DOIT mettre en forme une adresse canadienne comme le décrivent les link:https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[lignes directrices d’adressage] de Postes Canada.
 La municipalité, le code de la province ou du territoire et le code postal vont sur la même ligne.
 Le code postal DOIT être en majuscules, sous la forme `A1A 1A1`, avec une espace.
 Une étiquette d’adresse PEUT employer les majuscules et aucune ponctuation, comme le recommande Postes Canada.
@@ -50,10 +50,19 @@ Il DOIT garder une adresse dans sa langue d’origine, et DEVRAIT indiquer cette
 Une rue comme `rue Principale` garde son ordre et son générique français.
 Les noms de lieux officiels n’ont qu’une forme, et un nom traduit peut envoyer le courrier au mauvais endroit.
 
+== Références
+
+=== Références normatives
+
+* link:https://www.unicode.org/standard/standard.html[The Unicode Standard], Consortium Unicode. link:https://web.archive.org/web/20261027024856/http://unicode.org/standard/standard.html[Copie archivée]
+* link:https://www.iso.org/iso-3166-country-codes.html[ISO 3166 Country Codes], ISO. link:https://web.archive.org/web/20261027022740/https://www.iso.org/iso-3166-country-codes.html[Copie archivée]
+* link:https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Addressing guidelines: Civic address], Postes Canada. link:https://web.archive.org/web/20260709050719/https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Copie archivée]
+
 == Historique du document
 
 [cols="1,1,4",options="header"]
 |===
 |Version |Date |Changement
 |0.1.0 |2026-11-04 |Première version.
+|0.1.1 |2026-11-04 |Liens vers les normes externes et références ajoutées.
 |===

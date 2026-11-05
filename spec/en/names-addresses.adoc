@@ -14,7 +14,7 @@ Many people have one name only, several family names, or the family name first.
 A form built for one pattern rejects the others.
 
 [[LOC-051]]
-*LOC-051.* A name field MUST accept any Unicode letter and diacritical mark.
+*LOC-051.* A name field MUST accept any link:https://www.unicode.org/standard/standard.html[Unicode] letter and diacritical mark.
 It MUST also accept spaces, hyphens and apostrophes.
 It MUST accept a name of one character and SHOULD allow at least 100 characters.
 A product MUST store and show the name as the person wrote it, with no change of case.
@@ -29,7 +29,7 @@ The name used every day can differ from the legal name.
 == Postal addresses
 
 [[LOC-053]]
-*LOC-053.* A product MUST store a postal address as separate fields, with the country as an {abbr-iso-first} 3166-1 two-letter code.
+*LOC-053.* A product MUST store a postal address as separate fields, with the country as an link:https://www.iso.org/iso-3166-country-codes.html[ISO 3166-1] two-letter code.
 It MUST show and print the address in the format of its country.
 The fields MUST fit the country.
 A product MUST NOT require a postal code or a region where the country has none.
@@ -37,7 +37,7 @@ Each country orders and names the parts of an address in its own way.
 Separate fields let a product print one address for many postal systems.
 
 [[LOC-054]]
-*LOC-054.* A product MUST format a Canadian address as the addressing guidelines of Canada Post describe.
+*LOC-054.* A product MUST format a Canadian address as the link:https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[addressing guidelines] of Canada Post describe.
 The municipality, the two-letter code of the province or territory and the postal code go on the same line.
 The postal code MUST be in capital letters, in the form `A1A 1A1`, with one space.
 A mailing label MAY use capital letters and no punctuation, as Canada Post recommends.
@@ -50,10 +50,19 @@ It MUST keep an address in its original language, and SHOULD mark that language.
 A street such as `rue Principale` keeps its French order and type.
 Official place names have one form, and a translated name can send mail to the wrong place.
 
+== References
+
+=== Normative
+
+* link:https://www.unicode.org/standard/standard.html[The Unicode Standard], Unicode Consortium. link:https://web.archive.org/web/20261027024856/http://unicode.org/standard/standard.html[Archived copy]
+* link:https://www.iso.org/iso-3166-country-codes.html[ISO 3166 Country Codes], ISO. link:https://web.archive.org/web/20261027022740/https://www.iso.org/iso-3166-country-codes.html[Archived copy]
+* link:https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Addressing guidelines: Civic address], Canada Post. link:https://web.archive.org/web/20260709050719/https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Archived copy]
+
 == Document history
 
 [cols="1,1,4",options="header"]
 |===
 |Version |Date |Change
 |0.1.0 |2026-11-04 |First version.
+|0.1.1 |2026-11-04 |Linked outside standards and added references.
 |===

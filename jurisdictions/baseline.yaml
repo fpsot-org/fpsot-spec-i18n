@@ -70,7 +70,7 @@ rows:
     requirement: {en: "Interface messages go to translators as XLIFF 2.1.", fr: "Les messages d’interface vont aux personnes qui traduisent en XLIFF 2.1."}
     international: {en: "XLIFF 2.1 holds source and target text in units and segments, with a state for each segment. Version 2.2 is a committee specification.", fr: "XLIFF 2.1 range le texte source et cible en unités et en segments, avec un état pour chaque segment. La version 2.2 est une spécification de comité."}
     international_source: {title: "XLIFF Version 2.1, OASIS Standard", version: "2.1", date: "2018-02-13", url: "https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html", archive: "https://web.archive.org/web/20260702061048/https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html"}
-    fpsot: {en: "Platform catalogues in the repository. XLIFF 2.1 for exchange with translation tools. No XLIFF 1.2 for new work.", fr: "Catalogues de plateforme dans le dépôt. XLIFF 2.1 pour les échanges avec les outils de traduction. Aucun XLIFF 1.2 pour un nouveau travail."}
+    fpsot: {en: "Platform catalogs in the repository. XLIFF 2.1 for exchange with translation tools. No XLIFF 1.2 for new work.", fr: "Catalogues de plateforme dans le dépôt. XLIFF 2.1 pour les échanges avec les outils de traduction. Aucun XLIFF 1.2 pour un nouveau travail."}
   - id: LOC-033
     topic: translation
     requirement: {en: "Long text is translated through PO files.", fr: "Les textes longs se traduisent au moyen de fichiers PO."}
@@ -106,7 +106,7 @@ rows:
     requirement: {en: "A name is not assumed to have a first and last part.", fr: "Un nom n’est pas supposé avoir un prénom et un nom de famille."}
     international: {en: "Prefer one field for the full name. Do not require a family name, and do not assume the given name comes first.", fr: "Préférer un seul champ pour le nom complet. Ne pas exiger de nom de famille, ni supposer que le prénom vient en premier."}
     international_source: {title: "W3C, Personal names around the world", date: "2016-01-24", url: "https://www.w3.org/International/questions/qa-personal-names", archive: "https://web.archive.org/web/20261005230211/https://www.w3.org/International/questions/qa-personal-names"}
-    fpsot: {en: "One full-name field. Optional parts only when a process needs them, labelled Given names and Family name.", fr: "Un seul champ pour le nom complet. Parties facultatives seulement quand un processus en a besoin, libellées Prénoms et Nom de famille."}
+    fpsot: {en: "One full-name field. Optional parts only when a process needs them, labeled Given names and Family name.", fr: "Un seul champ pour le nom complet. Parties facultatives seulement quand un processus en a besoin, libellées Prénoms et Nom de famille."}
   - id: LOC-054
     topic: addresses
     requirement: {en: "Canadian addresses follow Canada Post.", fr: "Les adresses canadiennes suivent Postes Canada."}
