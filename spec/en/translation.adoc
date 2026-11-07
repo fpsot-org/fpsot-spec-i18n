@@ -24,7 +24,7 @@ The mark shows the reviewer which entries still need a person.
 
 [[LOC-032]]
 *LOC-032.* A product MUST keep its interface messages in one source catalog per language, in the format of its platform.
-It MUST exchange those messages with translation services and translation tools as {abbr-xliff-first} files in link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[version 2.1].
+It MUST exchange those messages with translation services and translation tools as {abbr-xliff-first} files that follow link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[XLIFF 2.1].
 A platform format, such as the message bundles of a Java framework, is what the program reads.
 Professional translation tools read {abbr-xliff} 2.1, the approved standard.
 The format keeps the source, the translation and the state of each segment together.
@@ -75,4 +75,5 @@ A state kept in the file travels with the translation to any tool.
 |Version |Date |Change
 |0.1.0 |2026-11-04 |First version.
 |0.1.1 |2026-11-04 |Linked outside standards, added references and moved to US spelling.
+|0.2.0 |2026-11-07 |The XLIFF link now names XLIFF 2.1.
 |===

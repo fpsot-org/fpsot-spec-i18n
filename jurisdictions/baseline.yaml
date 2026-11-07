@@ -57,7 +57,7 @@ rows:
     topic: messages
     requirement: {en: "Messages with numbers use plural categories.", fr: "Les messages avec des nombres emploient les catégories de pluriel."}
     international: {en: "MessageFormat 2 selects a variant of a message from the plural category of a number. The categories come from CLDR plural rules.", fr: "MessageFormat 2 choisit une variante du message selon la catégorie de pluriel d’un nombre. Les catégories viennent des règles de pluriel du CLDR."}
-    international_source: {title: "UTS #35, Part 9: MessageFormat", version: "CLDR 49", date: "2026-10-21", url: "https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html", archive: "https://web.archive.org/web/20261027022518/https://www.unicode.org/reports/tr35/tr35-messageFormat.html"}
+    international_source: {title: "UTS #35, Part 9: MessageFormat", version: "CLDR 49", date: "2026-10-21", url: "https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html", archive: "https://web.archive.org/web/20261010042251/https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html"}
     fpsot: {en: "ICU MessageFormat plurals from CLDR rules. MessageFormat 2 where the library has a stable interface. No test for 1 in code.", fr: "Pluriels MessageFormat d’ICU selon les règles du CLDR. MessageFormat 2 là où la bibliothèque offre une interface stable. Aucun test de la valeur 1 dans le code."}
   - id: LOC-030
     topic: translation

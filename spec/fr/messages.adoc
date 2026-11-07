@@ -28,7 +28,7 @@ Une phrase faite de fragments anglais ne peut pas devenir du français correct.
 Ils passent par {abbr-icu} ou par une autre bibliothèque qui lit la même syntaxe.
 Un produit PEUT plutôt employer link:https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html[Unicode MessageFormat 2] là où sa bibliothèque offre cette syntaxe dans une {abbr-api-first} stable.
 MessageFormat est la syntaxe commune des variables, des pluriels et des choix.
-La syntaxe MessageFormat 2 est stable dans la link:https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html[spécification] du {abbr-cldr-first} 49.
+La syntaxe MessageFormat 2 est stable dans link:https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html[UTS #35] pour le {abbr-cldr-first} 49.
 Une partie de son {abbr-api} dans {abbr-icu} 79 reste en préversion technologique.
 
 [[LOC-023]]
@@ -56,7 +56,7 @@ Le français a besoin de deux mots différents pour ces deux usages.
 === Références normatives
 
 * link:https://unicode-org.github.io/icu/userguide/format_parse/messages/[ICU User Guide, Formatting Messages], Consortium Unicode. link:https://web.archive.org/web/20261022130913/https://unicode-org.github.io/icu/userguide/format_parse/messages/[Copie archivée]
-* link:https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html[UTS #35, Part 9: MessageFormat], Consortium Unicode, CLDR 49, révision 79, 2026-10-21. link:https://web.archive.org/web/20261027022518/https://www.unicode.org/reports/tr35/tr35-messageFormat.html[Copie archivée]
+* link:https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html[UTS #35, Part 9: MessageFormat], Consortium Unicode, CLDR 49, révision 79, 2026-10-21. link:https://web.archive.org/web/20261010042251/https://www.unicode.org/reports/tr35/tr35-79/tr35-messageFormat.html[Copie archivée]
 
 == Historique du document
 
@@ -65,4 +65,5 @@ Le français a besoin de deux mots différents pour ces deux usages.
 |Version |Date |Changement
 |0.1.0 |2026-11-04 |Première version.
 |0.1.1 |2026-11-04 |Liens vers les normes externes, références ajoutées et orthographe américaine pour l’anglais.
+|0.2.0 |2026-11-07 |Le lien vers MessageFormat 2 nomme maintenant UTS #35, et sa copie archivée est la page de la révision 79.
 |===

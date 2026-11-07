@@ -8,7 +8,7 @@ Programs exchange values in forms that do not depend on a {term-locale}, such as
 == Locale data
 
 [[LOC-010]]
-*LOC-010.* A product MUST format text for display with the link:https://cldr.unicode.org/downloads/cldr-49[data] of the {abbr-cldr-first}.
+*LOC-010.* A product MUST format text for display with the data of the {abbr-cldr-first}, such as link:https://cldr.unicode.org/downloads/cldr-49[CLDR 49].
 This covers dates and times, numbers and percentages, currency amounts, units and lists.
 It MUST use a library that reads this data, such as {abbr-icu-first} or the formatting classes of the platform.
 A product MUST NOT write its own date or number patterns for a locale.
@@ -26,9 +26,9 @@ A stated version lets a reviewer explain a change in the output.
 
 [[LOC-012]]
 *LOC-012.* A product MUST show a date and time in the zone of the person or place it concerns.
-It MUST identify that zone by its name in the link:https://www.iana.org/time-zones[time zone database] of the {abbr-iana-first}, such as `America/Toronto`.
+It MUST identify that zone by its name in the link:https://www.iana.org/time-zones[Time Zone Database] of the {abbr-iana-first}, such as `America/Toronto`.
 It SHOULD show the zone next to the time when readers may live in other zones.
-A zone shown to people MUST use the link:https://cldr.unicode.org/downloads/cldr-49[localized name] of the {abbr-cldr}, such as "Eastern Time".
+A zone shown to people MUST use its localized name in the {abbr-cldr}, such as "Eastern Time" in link:https://cldr.unicode.org/downloads/cldr-49[CLDR 49].
 An offset alone does not follow daylight saving time, and few people understand a database name.
 A deadline shown without its zone misleads a person in another province.
 
@@ -47,7 +47,8 @@ Text formatted for one reader would mean something else to another program.
 == Sorting
 
 [[LOC-015]]
-*LOC-015.* A product MUST sort text for people with the link:https://cldr.unicode.org/downloads/cldr-49[collation rules] of the {abbr-cldr} for their locale.
+*LOC-015.* A product MUST sort text for people with the collation rules of the {abbr-cldr} for their locale.
+Each release of the data holds these rules, such as link:https://cldr.unicode.org/downloads/cldr-49[CLDR 49].
 It MUST NOT sort such text by code point or by byte.
 In French, a word that starts with `é` belongs with the words in `e`, not after `z`.
 Readers expect the order of their own dictionary.
@@ -70,4 +71,5 @@ Readers expect the order of their own dictionary.
 |Version |Date |Change
 |0.1.0 |2026-11-04 |First version.
 |0.1.1 |2026-11-04 |Linked outside standards and added references.
+|0.2.0 |2026-11-07 |Links now name CLDR 49 and the Time Zone Database, not generic words.
 |===

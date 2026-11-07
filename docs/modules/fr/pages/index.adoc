@@ -25,7 +25,7 @@ En français, 0 et 1 prennent tous deux le singulier, donc « 0 fichier » est c
 
 == Mettre en forme avec les données régionales
 
-Mettez en forme chaque date, nombre et montant avec une bibliothèque qui lit les link:https://cldr.unicode.org/downloads/cldr-49[données] du {abbr-cldr-first}.
+Mettez en forme chaque date, nombre et montant avec une bibliothèque qui lit les données du {abbr-cldr-first}, comme link:https://cldr.unicode.org/downloads/cldr-49[CLDR 49].
 La règle LOC-010 le demande.
 N’écrivez jamais à la main un modèle comme `yyyy/MM/dd`.
 Montrez le fuseau horaire à côté d’une échéance quand les personnes peuvent vivre dans d’autres provinces.
@@ -39,7 +39,7 @@ Déclarez la langue sur l’élément `html`, comme le demande LOC-040.
 
 == Envoyer le texte à traduire
 
-Exportez le catalogue en fichier {abbr-xliff-first} en link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[version 2.1] pour l’équipe de traduction, comme le demande LOC-032.
+Exportez le catalogue en fichier {abbr-xliff-first} conforme à link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[XLIFF 2.1] pour l’équipe de traduction, comme le demande LOC-032.
 La traduction automatique peut fournir une première ébauche, mais chaque ébauche garde l’état `initial` jusqu’à sa révision par une personne.
 Importez le fichier révisé, et laissez les vérifications de version confirmer qu’aucune entrée n’attend encore.
 
@@ -74,4 +74,5 @@ Gardez les noms de rues et de municipalités tels qu’ils sont écrits.
 |Version |Date |Changement
 |0.1.0 |2026-11-04 |Première version.
 |0.1.1 |2026-11-04 |Liens vers les normes externes, références ajoutées et orthographe américaine pour l’anglais.
+|0.2.0 |2026-11-07 |Les liens nomment maintenant CLDR 49 et XLIFF 2.1.
 |===

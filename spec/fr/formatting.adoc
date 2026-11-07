@@ -8,7 +8,7 @@ Les programmes échangent des valeurs indépendantes de tout {term-locale}, comm
 == Données régionales
 
 [[LOC-010]]
-*LOC-010.* Un produit DOIT mettre en forme le texte affiché avec les link:https://cldr.unicode.org/downloads/cldr-49[données] du {abbr-cldr-first}.
+*LOC-010.* Un produit DOIT mettre en forme le texte affiché avec les données du {abbr-cldr-first}, comme celles de link:https://cldr.unicode.org/downloads/cldr-49[CLDR 49].
 Cela vise les dates et les heures, les nombres et les pourcentages, les montants, les unités et les listes.
 Il DOIT employer une bibliothèque qui lit ces données, comme {abbr-icu-first} ou celles de la plateforme.
 Un produit NE DOIT PAS écrire ses propres modèles de date ou de nombre pour un paramètre régional.
@@ -26,9 +26,9 @@ Une version indiquée permet d’expliquer un changement dans la sortie.
 
 [[LOC-012]]
 *LOC-012.* Un produit DOIT montrer une date et une heure dans le fuseau de la personne ou du lieu visé.
-Il DOIT désigner ce fuseau par son nom dans la link:https://www.iana.org/time-zones[base des fuseaux horaires] de l’{abbr-iana-first}, comme `America/Toronto`.
+Il DOIT désigner ce fuseau par son nom dans la link:https://www.iana.org/time-zones[Time Zone Database] de l’{abbr-iana-first}, comme `America/Toronto`.
 Il DEVRAIT montrer le fuseau à côté de l’heure quand le lectorat peut vivre dans d’autres fuseaux.
-Un fuseau montré aux personnes DOIT porter le link:https://cldr.unicode.org/downloads/cldr-49[nom localisé] du {abbr-cldr}, comme « heure de l’Est ».
+Un fuseau montré aux personnes DOIT porter son nom localisé du {abbr-cldr}, comme « heure de l’Est » dans link:https://cldr.unicode.org/downloads/cldr-49[CLDR 49].
 Un décalage seul ne suit pas l’heure avancée, et peu de personnes comprennent un nom de la base.
 Une échéance montrée sans son fuseau induit en erreur une personne d’une autre province.
 
@@ -47,7 +47,8 @@ Un texte mis en forme pour une personne aurait un autre sens pour un autre progr
 == Tri
 
 [[LOC-015]]
-*LOC-015.* Un produit DOIT trier le texte destiné aux personnes selon le link:https://cldr.unicode.org/downloads/cldr-49[tri] du {abbr-cldr} de leur paramètre régional.
+*LOC-015.* Un produit DOIT trier le texte destiné aux personnes selon le tri du {abbr-cldr} de leur paramètre régional.
+Chaque version des données contient les règles de tri, comme link:https://cldr.unicode.org/downloads/cldr-49[CLDR 49].
 Il NE DOIT PAS trier ce texte par point de code ou par octet.
 En français, un mot qui commence par `é` se range avec les mots en `e`, et non après `z`.
 Les personnes s’attendent à l’ordre de leur propre dictionnaire.
@@ -70,4 +71,5 @@ Les personnes s’attendent à l’ordre de leur propre dictionnaire.
 |Version |Date |Changement
 |0.1.0 |2026-11-04 |Première version.
 |0.1.1 |2026-11-04 |Liens vers les normes externes et références ajoutées.
+|0.2.0 |2026-11-07 |Les liens nomment maintenant CLDR 49 et la Time Zone Database, et non des mots génériques.
 |===

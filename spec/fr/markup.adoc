@@ -63,6 +63,12 @@ Ses mises en page DOIVENT laisser au texte la place de s’allonger, sans largeu
 Le texte dans une image échappe à la traduction, et les personnes ne peuvent ni l’agrandir ni le copier.
 Le texte français est souvent plus long que le même texte en anglais.
 
+Un diagramme, un graphique ou toute image qui contient un autre contenu visuel important fait exception à la première phrase.
+Selon la définition des link:https://www.w3.org/TR/WCAG22/[WCAG 2.2], une telle image n’est pas une image de texte.
+Son texte reste tout de même du vrai texte.
+La spécification de la {abbr-fpsot-first} sur les diagrammes précise comment.
+Les personnes qui traduisent travaillent alors sur ce texte comme sur les autres textes.
+
 == Références
 
 === Références normatives
@@ -72,6 +78,7 @@ Le texte français est souvent plus long que le même texte en anglais.
 
 === Références informatives
 
+* link:https://www.w3.org/TR/WCAG22/[Web Content Accessibility Guidelines (WCAG) 2.2], W3C, recommandation du W3C, 2024-12-12. link:https://web.archive.org/web/20261103005900/https://www.w3.org/TR/WCAG22/[Copie archivée]
 * link:https://www.w3.org/International/questions/qa-html-language-declarations[Declaring language in HTML], W3C, 2021-06-23. link:https://web.archive.org/web/20260918002647/https://www.w3.org/International/questions/qa-html-language-declarations[Copie archivée]
 * link:https://www.w3.org/International/questions/qa-html-dir[Structural markup and right-to-left text in HTML], W3C, 2026-05-10. link:https://web.archive.org/web/20260905105242/https://www.w3.org/International/questions/qa-html-dir[Copie archivée]
 
@@ -82,4 +89,5 @@ Le texte français est souvent plus long que le même texte en anglais.
 |Version |Date |Changement
 |0.1.0 |2026-11-04 |Première version.
 |0.1.1 |2026-11-04 |Liens vers les normes externes et références ajoutées.
+|0.2.0 |2026-11-07 |L’exigence LOC-046 exempte maintenant les diagrammes, les graphiques et toute image qui contient un autre contenu visuel important. Leur texte reste du vrai texte.
 |===

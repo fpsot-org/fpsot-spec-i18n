@@ -25,7 +25,7 @@ In French, 0 and 1 both take the singular, so "0 fichier" is correct.
 
 == Format with locale data
 
-Format each date, number and amount with a library that reads the link:https://cldr.unicode.org/downloads/cldr-49[data] of the {abbr-cldr-first}.
+Format each date, number and amount with a library that reads the data of the {abbr-cldr-first}, such as link:https://cldr.unicode.org/downloads/cldr-49[CLDR 49].
 Rule LOC-010 asks for this.
 Never write a pattern such as `yyyy/MM/dd` by hand.
 Show the time zone next to a deadline when readers can live in other provinces.
@@ -39,7 +39,7 @@ Declare the language on the `html` element, as LOC-040 asks.
 
 == Send the text for translation
 
-Export the catalog as an {abbr-xliff-first} file in link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[version 2.1] for the translation team, as LOC-032 asks.
+Export the catalog as an {abbr-xliff-first} file that follows link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[XLIFF 2.1] for the translation team, as LOC-032 asks.
 Machine translation can give a first draft, but each draft keeps the state `initial` until a person reviews it.
 Import the reviewed file, and let the release checks confirm that no entry is still waiting.
 
@@ -73,4 +73,5 @@ Print a Canadian postal code as `A1A 1A1`, and keep street and municipality name
 |Version |Date |Change
 |0.1.0 |2026-11-04 |First version.
 |0.1.1 |2026-11-04 |Linked outside standards, added references and moved to US spelling.
+|0.2.0 |2026-11-07 |Links now name CLDR 49 and XLIFF 2.1.
 |===

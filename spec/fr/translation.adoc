@@ -24,7 +24,7 @@ La marque montre à la personne qui révise les entrées qui attendent encore un
 
 [[LOC-032]]
 *LOC-032.* Un produit DOIT garder ses messages d’interface dans un catalogue source par langue, au format de sa plateforme.
-Il DOIT échanger ces messages avec les services et les outils de traduction sous forme de fichiers {abbr-xliff-first} link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[2.1].
+Il DOIT échanger ces messages avec les outils et services de traduction en fichiers {abbr-xliff-first} conformes à link:https://docs.oasis-open.org/xliff/xliff-core/v2.1/os/xliff-core-v2.1-os.html[XLIFF 2.1].
 Le programme lit un format de plateforme, comme les paquets de messages d’un cadriciel Java.
 Les outils professionnels de traduction lisent {abbr-xliff} 2.1, la norme approuvée.
 Ce format garde ensemble la source, la traduction et l’état de chaque segment.
@@ -76,4 +76,5 @@ Un état gardé dans le fichier suit la traduction dans tout outil.
 |Version |Date |Changement
 |0.1.0 |2026-11-04 |Première version.
 |0.1.1 |2026-11-04 |Liens vers les normes externes, références ajoutées et orthographe américaine pour l’anglais.
+|0.2.0 |2026-11-07 |Le lien vers XLIFF nomme maintenant XLIFF 2.1.
 |===

@@ -46,7 +46,7 @@ The spec text in `spec/` wins on any difference. Each line cites its requirement
 - Every page must link to the other languages by their own names, with no flags (LOC-041).
 - Text must be Unicode in UTF-8 end to end. Accents must never be stripped (LOC-042). Search should use NFC and match with or without accents (LOC-043).
 - Products should be ready for right-to-left: direction in markup, `start`/`end` in style sheets, mirrored direction icons (LOC-044). Text of unknown direction must be isolated with `bdi` or `dir="auto"` (LOC-045).
-- Text must not be in images. Layouts must leave room for longer French text (LOC-046).
+- Text must not be in images. A diagram, chart or other picture with significant other visual content is not an image of text; its text stays real text. Layouts must leave room for longer French text (LOC-046).
 
 ## Names and addresses
 

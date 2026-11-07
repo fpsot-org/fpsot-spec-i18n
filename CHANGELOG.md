@@ -6,6 +6,20 @@ and versions follow [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.h
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-07
+
+### Changed
+
+- LOC-046 now has an exception: a diagram, a chart or another picture with significant other visual content is not an image of text, under the WCAG 2.2 definition. Its text stays real text, as the FPSOT diagrams specification sets out.
+- The skill states the LOC-046 exception.
+
+### Fixed
+
+- The BCP 47 link in LOC-001 now goes to the BCP 47 page, not to RFC 5646. BCP 47 joins the references with an archived copy.
+- Link texts now name the standard, such as "CLDR 49", "XLIFF 2.1", "UTS #35", the Time Zone Database and the Language Subtag Registry, instead of words such as "data" or "version 2.1".
+- The French pages link the French Canada Post addressing guidelines, with an archived copy.
+- UTS #35 Part 9 (MessageFormat) now has an archived copy of its revision 79 page.
+
 ## [0.1.2] - 2026-11-05
 
 ### Fixed

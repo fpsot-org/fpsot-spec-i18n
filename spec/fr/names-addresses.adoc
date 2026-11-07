@@ -37,7 +37,7 @@ Chaque pays ordonne et nomme à sa façon les parties d’une adresse.
 Des champs distincts permettent d’imprimer une même adresse pour bien des systèmes postaux.
 
 [[LOC-054]]
-*LOC-054.* Un produit DOIT mettre en forme une adresse canadienne comme le décrivent les link:https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[lignes directrices d’adressage] de Postes Canada.
+*LOC-054.* Un produit DOIT mettre en forme une adresse canadienne comme le décrivent les link:https://www.canadapost-postescanada.ca/scp/fr/soutien/sujet/directives-adressage/adresse-municipale.page[directives d’adressage] de Postes Canada.
 La municipalité, le code de la province ou du territoire et le code postal vont sur la même ligne.
 Le code postal DOIT être en majuscules, sous la forme `A1A 1A1`, avec une espace.
 Une étiquette d’adresse PEUT employer les majuscules et aucune ponctuation, comme le recommande Postes Canada.
@@ -56,7 +56,7 @@ Les noms de lieux officiels n’ont qu’une forme, et un nom traduit peut envoy
 
 * link:https://www.unicode.org/standard/standard.html[The Unicode Standard], Consortium Unicode. link:https://web.archive.org/web/20261027024856/http://unicode.org/standard/standard.html[Copie archivée]
 * link:https://www.iso.org/iso-3166-country-codes.html[ISO 3166 Country Codes], ISO. link:https://web.archive.org/web/20261027022740/https://www.iso.org/iso-3166-country-codes.html[Copie archivée]
-* link:https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Addressing guidelines: Civic address], Postes Canada. link:https://web.archive.org/web/20260709050719/https://www.canadapost-postescanada.ca/cpc/en/support/articles/addressing-guidelines/civic-address.page[Copie archivée]
+* link:https://www.canadapost-postescanada.ca/scp/fr/soutien/sujet/directives-adressage/adresse-municipale.page[Directives d’adressage – Adresse municipale], Postes Canada. link:https://web.archive.org/web/20260614140410/https://www.canadapost-postescanada.ca/scp/fr/soutien/sujet/directives-adressage/adresse-municipale.page[Copie archivée]
 
 == Historique du document
 
@@ -65,4 +65,5 @@ Les noms de lieux officiels n’ont qu’une forme, et un nom traduit peut envoy
 |Version |Date |Changement
 |0.1.0 |2026-11-04 |Première version.
 |0.1.1 |2026-11-04 |Liens vers les normes externes et références ajoutées.
+|0.2.0 |2026-11-07 |La page renvoie maintenant à la version française des directives d’adressage de Postes Canada.
 |===
