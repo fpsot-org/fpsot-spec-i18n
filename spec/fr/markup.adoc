@@ -61,6 +61,8 @@ Sinon, un nom en arabe dans une phrase en français changerait l’ordre des mot
 *LOC-046.* Un produit NE DOIT PAS placer dans des images du texte que les personnes lisent.
 Ses mises en page DOIVENT laisser au texte la place de s’allonger, sans largeur fixe prévue pour l’anglais.
 Le texte dans une image échappe à la traduction, et les personnes ne peuvent ni l’agrandir ni le copier.
+Les diagrammes font exception, car ils gardent leurs mots en vrai texte, dans un fichier par langue.
+Les exigences DIA-040 à DIA-043 de la spécification de la {abbr-fpsot-first} sur les diagrammes le demandent.
 Le texte français est souvent plus long que le même texte en anglais.
 
 == Références
@@ -82,4 +84,5 @@ Le texte français est souvent plus long que le même texte en anglais.
 |Version |Date |Changement
 |0.1.0 |2026-11-04 |Première version.
 |0.1.1 |2026-11-04 |Liens vers les normes externes et références ajoutées.
+|0.1.3 |2026-11-11 |LOC-046 nomme les diagrammes comme exception et renvoie à la spécification sur les diagrammes.
 |===
