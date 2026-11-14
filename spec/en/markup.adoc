@@ -60,6 +60,8 @@ A name in Arabic inside a French sentence would otherwise reorder the words arou
 *LOC-046.* A product MUST NOT put text that people read inside images.
 Its layouts MUST leave room for text to grow, with no fixed width that fits only the English text.
 Text in an image escapes translation, and people cannot resize or copy it.
+Diagrams are the exception, because they keep their words as real text, in one file per language.
+Requirements DIA-040 to DIA-043 of the {abbr-fpsot-first} specification on diagrams ask for this.
 French text often runs longer than the same text in English.
 
 == References
@@ -81,4 +83,5 @@ French text often runs longer than the same text in English.
 |Version |Date |Change
 |0.1.0 |2026-11-04 |First version.
 |0.1.1 |2026-11-04 |Linked outside standards and added references.
+|0.1.3 |2026-11-11 |LOC-046 names diagrams as the exception, with a pointer to the diagrams specification.
 |===

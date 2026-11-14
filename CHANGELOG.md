@@ -6,6 +6,16 @@ and versions follow [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.h
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-11-11
+
+### Changed
+
+- LOC-046 names diagrams as the exception to the rule on text in images, because they keep their words as real text, in one file per language (DIA-040 to DIA-043 of the FPSOT diagrams specification). The rule itself does not change.
+
+### Fixed
+
+- References: the Québec policy on French in information technology now links its archived copy, because the page left quebec.ca.
+
 ## [0.1.2] - 2026-11-05
 
 ### Fixed
